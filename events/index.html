@@ -26,7 +26,10 @@ description: Discover and explore exciting food and wine events across Florida f
       {% assign event_day = event_date_parts[1] | plus: 0 %}
       {% assign current_date = site.time | date: "%s" | plus: 0 %}
       {% assign event_date = post.date | date: "%s" | plus: 0 %}
-      {% assign is_upcoming = event_date > current_date %}
+      {% assign is_upcoming = false %}
+      {% if event_date > current_date %}
+        {% assign is_upcoming = true %}
+      {% endif %}
       
       <div class="event-card {% if is_upcoming %}upcoming{% else %}past{% endif %}">
         <div class="event-image">
