@@ -47,13 +47,15 @@ a.btn:visited { color: var(--light-text); }
 
 .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
 
-.logo a { color: white; text-decoration: none; font-size: 1.8rem; font-weight: 700; }
+.logo a { color: var(--light-text); text-decoration: none; font-size: 1.8rem; font-weight: 700; }
+
+div.logo a:visited { color: var(--light-text); }
 
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 
-.nav-links a { color: white; font-weight: 600; }
+.nav-links a { color: var(--light-text); font-weight: 600; }
 
-.nav-links a:hover { color: white; text-decoration: underline; }
+.nav-links a:hover { color: var(--light-text); text-decoration: underline; }
 
 .hero-content { margin-top: 4rem; }
 
