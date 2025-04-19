@@ -1,0 +1,75 @@
+# Site settings
+title: Florida Food Festival - A Celebration of Florida's Culinary Delights
+email: info@floridafoodfestival.com
+description: >- 
+  Join us for the annual Florida Food Festival, showcasing the finest cuisine, 
+  local produce, and culinary talent that Florida has to offer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://floridafoodfestival.com" # the base hostname & protocol
+twitter_username: flafoodfest
+github_username: floridafoodfestival
+author: Florida Food Festival Team
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  vendors:
+    output: true
+  events:
+    output: true
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Florida Food Festival Team"
+  - scope:
+      path: ""
+      type: "vendors"
+    values:
+      layout: "vendor"
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: "event"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
+
+# SEO Tag settings
+twitter:
+  username: flafoodfest
+  card: summary_large_image
+logo: /assets/images/logo.png
+social:
+  name: Florida Food Festival
+  links:
+    - https://twitter.com/flafoodfest
+    - https://www.facebook.com/floridafoodfestival
+    - https://www.instagram.com/flafoodfestival
+
+# Google Analytics
+google_analytics: UA-XXXXXXXX-X
