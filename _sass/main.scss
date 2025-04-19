@@ -104,7 +104,6 @@ a:visited {
 
 .btn:hover {
   opacity: .9;
-  color: white;
   transform: translateY(-2px);
 }
 
@@ -136,7 +135,8 @@ a:visited {
 }
 
 .logo a {
-  color: var(--light-text);
+  color: white;
+  text-decoration: none;
   font-size: 1.8rem;
   font-weight: 700;
 }
@@ -148,12 +148,13 @@ a:visited {
 }
 
 .nav-links a {
-  color: var(--light-text);
+  color: white;
   font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  color: white;
+  text-decoration: underline;
 }
 
 .hero-content {
@@ -420,7 +421,7 @@ a:visited {
 }
 
 .link-group a:hover {
-  color: var(--light-text);
+  color: white;
 }
 
 .social-links {
@@ -960,6 +961,10 @@ a:visited {
 }
 
 .post-title a:hover {
+  color: var(--primary-color);
+}
+
+.post-title a:visited {
   color: var(--primary-color);
 }
 
