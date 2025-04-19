@@ -17,13 +17,23 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+
+# Pagination settings
+paginate: 9
+paginate_path: "/events/page:num/"
+
+# Permalink structure for blog posts
+permalink: /events/:year/:month/:day/:title/
 
 # Collections
 collections:
   vendors:
     output: true
+    permalink: /vendors/:name/
   events:
     output: true
+    permalink: /special-events/:name/
 
 # Default front matter
 defaults:
@@ -33,6 +43,7 @@ defaults:
     values:
       layout: "post"
       author: "Florida Food Festival Team"
+      excerpt_separator: <!--more-->
   - scope:
       path: ""
       type: "vendors"
@@ -43,6 +54,11 @@ defaults:
       type: "events"
     values:
       layout: "event"
+  - scope:
+      path: "events"
+    values:
+      layout: "events"
+      title: "Florida Food Festival Events"
   - scope:
       path: ""
     values:
@@ -72,4 +88,4 @@ social:
     - https://www.instagram.com/flafoodfestival
 
 # Google Analytics
-google_analytics: UA-XXXXXXXX-X
+google_analytics: UA-G-DW82LSZY3F

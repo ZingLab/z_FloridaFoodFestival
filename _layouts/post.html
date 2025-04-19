@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<article class="event-post">
+  <div class="event-header" {% if page.header_image %}style="background-image: url('{{ page.header_image }}');"{% endif %}>
+    <div class="container">
+      <h1 class="event-title">{{ page.title }}</h1>
+      <div class="event-meta">
+        <span class="event-dates">{{ page.event_dates }}</span>
+        <span class="event-times">{{ page.event_times }}</span>
+        <span class="event-location">{{ page.location }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="event-content">
+      <div class="event-details">
+        {% if page.featured_image %}
+        <div class="event-featured-image">
+          <img src="{{ page.featured_image }}" alt="{{ page.title }}">
+        </div>
+        {% endif %}
+        
+        <div class="event-description">
+          {{ content }}
+        </div>
+      </div>
+
+      {% if page.event_highlights %}
+      <div class="event-highlights">
+        <h2>Event Highlights</h2>
+        <ul>
+          {% for highlight in page.event_highlights %}
+          <li>
+            <h3>{{ highlight.title }}</h3>
+            <p>{{ highlight.description }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.food_offerings %}
+      <div class="food-offerings">
+        <h2>Featured Food & Drinks</h2>
+        <ul>
+          {% for item in page.food_offerings %}
+          <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="event-cta">
+      {% if page.ticket_link %}
+      <a href="{{ page.ticket_link }}" class="btn btn-primary">Get Tickets</a>
+      {% endif %}
+      <a href="/events/" class="btn btn-secondary">View All Events</a>
+    </div>
+  </div>
+</article>

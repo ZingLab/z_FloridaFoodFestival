@@ -1,0 +1,81 @@
+---
+layout: default
+title: Upcoming Food & Wine Events
+description: Discover and explore exciting food and wine events across Florida featuring local cuisine, chef demonstrations, tastings, and more.
+---
+
+<section class="page-header">
+  <div class="container">
+    <h1>Florida Food Festival Events</h1>
+    <p class="subtitle">Discover our upcoming food and wine celebrations</p>
+  </div>
+</section>
+
+<section class="events-listing">
+  <div class="container">
+    <div class="events-filter">
+      <button class="filter-btn active" data-filter="all">All Events</button>
+      <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+      <button class="filter-btn" data-filter="past">Past Events</button>
+    </div>
+    
+    <div class="events-grid">
+      {% for post in site.posts %}
+      {% assign event_date_parts = post.event_dates | split: "," | first | split: " " %}
+      {% assign event_month = event_date_parts[0] %}
+      {% assign event_day = event_date_parts[1] | plus: 0 %}
+      {% assign current_date = site.time | date: "%s" | plus: 0 %}
+      {% assign event_date = post.date | date: "%s" | plus: 0 %}
+      {% assign is_upcoming = event_date > current_date %}
+      
+      <div class="event-card {% if is_upcoming %}upcoming{% else %}past{% endif %}">
+        <div class="event-image">
+          {% if post.featured_image %}
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+          {% else %}
+          <img src="/assets/images/events/default-event.jpg" alt="{{ post.title }}">
+          {% endif %}
+          <div class="event-date">
+            <span class="month">{{ event_month }}</span>
+            <span class="day">{{ event_day }}</span>
+          </div>
+        </div>
+        <div class="event-details">
+          <h3 class="event-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="event-meta">
+            <span class="event-dates">{{ post.event_dates }}</span>
+            <span class="event-location">{{ post.location }}</span>
+          </div>
+          <div class="event-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 25 }}
+          </div>
+          <a href="{{ post.url }}" class="btn btn-small">View Details</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
+      {% endif %}
+      
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="events-subscription">
+  <div class="container">
+    <div class="subscription-box">
+      <h2>Stay Updated on Future Events</h2>
+      <p>Subscribe to our newsletter to receive announcements about upcoming food and wine festivals.</p>
+      <form class="subscription-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
