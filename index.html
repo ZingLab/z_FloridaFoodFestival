@@ -18,17 +18,21 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
   title="About the Festival"
   content="<p>The Florida Food Festival brings together the best culinary experiences Florida has to offer. From fresh seafood and citrus-inspired dishes to Caribbean-influenced cuisine and farm-to-table creations, our festival showcases the diverse flavors of the Sunshine State.</p>
   <p>Join award-winning chefs, local producers, and food enthusiasts for three days of tasting, learning, and celebrating Florida's rich culinary heritage.</p>"
-  features=site.data.features
+%}
+
+{% include recent_posts.html 
+  title="Upcoming Food Events"
+  description="Check out these exciting food and wine events coming to Florida in the near future."
+  limit=3
+  background_class="alt-background"
 %}
 
 {% include schedule.html 
   title="Festival Schedule"
-  days=site.data.schedule
 %}
 
 {% include vendors.html 
   title="Featured Vendors"
-  vendors=site.data.featured_vendors
 %}
 
 {% include location.html 
@@ -41,7 +45,6 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
 
 {% include tickets.html 
   title="Get Your Tickets"
-  tickets=site.data.ticket_types
 %}
 
 {% include newsletter.html 

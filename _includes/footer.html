@@ -1,0 +1,48 @@
+<!-- _includes/footer.html -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>{{ include.title | default: "Florida Food Festival" }}</h3>
+          <p>{{ include.tagline | default: "A Celebration of Florida's Culinary Delights" }}</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>{{ include.quick_links_title | default: "Quick Links" }}</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#vendors">Vendors</a></li>
+              <li><a href="#location">Location</a></li>
+              <li><a href="#tickets">Tickets</a></li>
+              <li><a href="/events/">Events</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>{{ include.info_links_title | default: "Information" }}</h4>
+            <ul>
+              <li><a href="/faqs">FAQs</a></li>
+              <li><a href="/accessibility">Accessibility</a></li>
+              <li><a href="/sponsors">Sponsors</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>{{ include.social_links_title | default: "Follow Us" }}</h4>
+            <div class="social-links">
+              <a href="{{ include.facebook_url | default: '#' }}" aria-label="Facebook">FB</a>
+              <a href="{{ include.instagram_url | default: '#' }}" aria-label="Instagram">IG</a>
+              <a href="{{ include.twitter_url | default: '#' }}" aria-label="Twitter">TW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ include.copyright_name | default: "Florida Food Festival" }}. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
