@@ -35,3 +35,8 @@ $text-color:       #111 !default;
 $spacing-unit:     30px !default;
 
 $table-text-align: left !default;
+
+
+// Default colors
+$primary-color: #ff6b35 !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
