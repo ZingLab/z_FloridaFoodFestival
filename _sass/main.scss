@@ -10,6 +10,7 @@
   --background-color: #ffffff;
   --section-bg: #f8f9fa;
   --border-color: #e0e0e0;
+  --post-title-color: #333333;
 }
 
 * {
@@ -66,7 +67,7 @@ a:hover {
 }
 
 a:visited {
-  color: white !important;
+  color: var(--light-text) !important;
 }
 
 .section {
@@ -951,12 +952,13 @@ a:visited {
 }
 
 .post-title {
+  color: var(--post-title-color);
   margin-bottom: 1rem;
   font-size: 1.4rem;
 }
 
 .post-title a {
-  color: var(--text-color);
+  color: var(--post-title-color);
   transition: color 0.3s ease;
 }
 
@@ -965,7 +967,7 @@ a:visited {
 }
 
 .post-title a:visited {
-  color: var(--primary-color);
+  color: var(--post-title-color);
 }
 
 .post-meta {
