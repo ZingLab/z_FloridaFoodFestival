@@ -1,0 +1,41 @@
+<!-- _includes/about.html -->
+<section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">{{ include.title | default: "About the Festival" }}</h2>
+      <div class="about-content">
+        <div class="about-text">
+          {% if include.content %}
+            {{ include.content }}
+          {% else %}
+            <p>The Florida Food Festival brings together the best culinary experiences Florida has to offer. From fresh seafood and citrus-inspired dishes to Caribbean-influenced cuisine and farm-to-table creations, our festival showcases the diverse flavors of the Sunshine State.</p>
+            <p>Join award-winning chefs, local producers, and food enthusiasts for three days of tasting, learning, and celebrating Florida's rich culinary heritage.</p>
+          {% endif %}
+        </div>
+        <div class="about-features">
+          {% for feature in include.features %}
+            <div class="feature">
+              <h3>{{ feature.title }}</h3>
+              <p>{{ feature.description }}</p>
+            </div>
+          {% else %}
+            <div class="feature">
+              <h3>Tasting Pavilions</h3>
+              <p>Sample cuisine from over 100 vendors representing Florida's diverse regions</p>
+            </div>
+            <div class="feature">
+              <h3>Chef Demonstrations</h3>
+              <p>Watch top Florida chefs share their techniques and favorite recipes</p>
+            </div>
+            <div class="feature">
+              <h3>Workshops & Classes</h3>
+              <p>Learn culinary skills from experts in hands-on sessions</p>
+            </div>
+            <div class="feature">
+              <h3>Local Producers</h3>
+              <p>Meet the farmers, fishermen, and artisans behind Florida's finest ingredients</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>

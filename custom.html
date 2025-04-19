@@ -1,0 +1,33 @@
+---
+layout: default
+title: Special Event - Summer Wine Tasting
+description: Join us for a special summer wine tasting event featuring Florida's finest vineyards and wineries.
+permalink: /special-events/summer-wine-tasting/
+---
+
+{% include hero.html 
+  title="Summer Wine Tasting"
+  tagline="Experience Florida's Finest Vineyards"
+  dates="July 20-21, 2025"
+  location="St. Augustine, FL"
+  button_text="Reserve Your Spot"
+  button_link="#tickets"
+  background_image="/assets/images/wine-tasting-bg.jpg"
+%}
+
+{% include about.html 
+  title="About This Event"
+  content="<p>Discover the surprising world of Florida wines at our exclusive Summer Wine Tasting event. This two-day celebration brings together vineyards and wineries from across the state, showcasing Florida's unique wine varieties.</p>
+  <p>From muscadine and fruit wines to surprising hybrids and innovative blends, you'll experience flavors that can only come from Florida's distinctive terroir and climate.</p>"
+  features=site.data.wine_features
+%}
+
+{% include tickets.html 
+  title="Reserve Your Tasting Pass"
+  tickets=site.data.wine_tickets
+%}
+
+{% include newsletter.html 
+  title="Get Event Updates"
+  description="Sign up to receive updates about this and other special events from Florida Food Festival."
+%}
