@@ -71,15 +71,7 @@ description: Discover and explore exciting food and wine events across Florida f
   </div>
 </section>
 
-<section class="events-subscription">
-  <div class="container">
-    <div class="subscription-box">
-      <h2>Stay Updated on Future Events</h2>
-      <p>Subscribe to our newsletter to receive announcements about upcoming food and wine festivals.</p>
-      <form class="subscription-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit" class="btn">Subscribe</button>
-      </form>
-    </div>
-  </div>
-</section>
+{% include newsletter.html 
+  title="Stay Updated"
+  description="Sign up for our newsletter to receive the latest festival updates and special offers."
+%}
