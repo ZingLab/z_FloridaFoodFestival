@@ -1,0 +1,51 @@
+<!-- _includes/tickets.html -->
+<section id="tickets" class="section schedule-section">
+    <div class="container">
+      <h2 class="section-title">{{ include.title | default: "Festival Schedule" }}</h2>
+      
+      <div class="schedule-tabs">
+        {% for day in include.days %}
+          <button class="tab-btn {% if forloop.first %}active{% endif %}" data-day="day{{ forloop.index }}">{{ day.label }}</button>
+        {% else %}
+          <button class="tab-btn active" data-day="day1">Day 1: June 15</button>
+          <button class="tab-btn" data-day="day2">Day 2: June 16</button>
+          <button class="tab-btn" data-day="day3">Day 3: June 17</button>
+        {% endfor %}
+      </div>
+      
+      <div class="schedule-content">
+        {% for day in include.days %}
+          <div class="day-schedule {% if forloop.first %}active{% endif %}" id="day{{ forloop.index }}">
+            {% for event in day.events %}
+              <div class="schedule-item">
+                <div class="time">{{ event.time }}</div>
+                <div class="event">
+                  <h3>{{ event.title }}</h3>
+                  <p>{{ event.description }}</p>
+                  <p class="location">{{ event.location }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="day-schedule active" id="day1">
+            <div class="schedule-item">
+              <div class="time">10:00 AM - 11:30 AM</div>
+              <div class="event">
+                <h3>Opening Ceremony</h3>
+                <p>Join us for the grand opening of the 2025 Florida Food Festival</p>
+                <p class="location">Main Stage</p>
+              </div>
+            </div>
+            <!-- Default schedule items would go here -->
+          </div>
+          <div class="day-schedule" id="day2">
+            <!-- Default schedule items for Day 2 -->
+          </div>
+          <div class="day-schedule" id="day3">
+            <!-- Default schedule items for Day 3 -->
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
