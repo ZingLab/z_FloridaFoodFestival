@@ -34,7 +34,7 @@ a:visited { color: white !important; }
 /* Buttons */
 .btn { display: inline-block; background-color: var(--primary-color); color: white; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; text-align: center; }
 
-.btn:hover { opacity: .9; color: white; transform: translateY(-2px); }
+.btn:hover { opacity: .9; transform: translateY(-2px); }
 
 .btn-large { padding: 1rem 2rem; font-size: 1.1rem; }
 
@@ -45,13 +45,13 @@ a:visited { color: white !important; }
 
 .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
 
-.logo a { color: var(--light-text); font-size: 1.8rem; font-weight: 700; }
+.logo a { color: white; text-decoration: none; font-size: 1.8rem; font-weight: 700; }
 
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 
-.nav-links a { color: var(--light-text); font-weight: 600; }
+.nav-links a { color: white; font-weight: 600; }
 
-.nav-links a:hover { color: var(--accent-color); }
+.nav-links a:hover { color: white; text-decoration: underline; }
 
 .hero-content { margin-top: 4rem; }
 
@@ -152,7 +152,7 @@ a:visited { color: white !important; }
 
 .link-group a { color: #aaa; transition: color 0.3s ease; }
 
-.link-group a:hover { color: var(--light-text); }
+.link-group a:hover { color: white; }
 
 .social-links { display: flex; gap: 1rem; }
 
@@ -322,6 +322,8 @@ a:visited { color: white !important; }
 .post-title a { color: var(--text-color); transition: color 0.3s ease; }
 
 .post-title a:hover { color: var(--primary-color); }
+
+.post-title a:visited { color: var(--primary-color); }
 
 .post-meta { color: #666; margin-bottom: 1rem; font-size: 0.9rem; }
 
