@@ -61,7 +61,7 @@ a {
 }
 
 a:hover {
-  color: darken(var(--primary-color), 10%);
+  opacity: .9;
 }
 
 .section {
@@ -98,7 +98,7 @@ a:hover {
 }
 
 .btn:hover {
-  background-color: darken(var(--primary-color), 10%);
+  opacity: .9;
   color: white;
   transform: translateY(-2px);
 }
