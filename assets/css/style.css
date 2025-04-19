@@ -21,11 +21,11 @@ p { margin-bottom: 1rem; }
 
 a { color: var(--primary-color); text-decoration: none; transition: color 0.3s ease; }
 
-a:hover { opacity: .9; }
+a:hover { text-decoration: underline; }
 
-a:visited { color: inherit; }
+a:visited { color: var(--light-text); }
 
-.section { padding: 5rem 0; }
+.section { padding: 3rem 0; }
 
 .section-title { text-align: center; margin-bottom: 3rem; position: relative; }
 
@@ -71,7 +71,7 @@ a:visited { color: inherit; }
 .feature h3 { color: var(--primary-color); margin-bottom: 0.75rem; }
 
 /* Schedule Section */
-.schedule-section { background-color: var(--section-bg); }
+.schedule-section { background-color: ivory; }
 
 .schedule-tabs { display: flex; justify-content: center; margin-bottom: 2rem; }
 
@@ -291,7 +291,7 @@ a:visited { color: inherit; }
   .subscription-form input, .subscription-form button { width: 100%; border-radius: 4px; }
   .subscription-form button { margin-top: 1rem; } }
 /* Recent Posts Component Styles */
-.recent-posts-section { padding: 5rem 0; }
+.recent-posts-section { padding: 3rem 0; background-color: antiquewhite; }
 
 .recent-posts-section.alt-background { background-color: var(--section-bg); }
 
@@ -330,6 +330,11 @@ a:visited { color: inherit; }
 .post-excerpt { margin-bottom: 1.5rem; color: #444; line-height: 1.6; flex-grow: 1; }
 
 .view-all-link { text-align: center; margin-top: 2rem; }
+
+/* Newsletter Component Styles */
+.newsletter { background-color: navajowhite; }
+
+.newsletter-embed { margin: 1em; background-color: white; border-radius: 10px; }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) { .recent-posts-grid { grid-template-columns: 1fr; } }
