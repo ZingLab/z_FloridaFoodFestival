@@ -113,7 +113,7 @@ a:hover {
 
 /* Header & Navigation */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/assets/images/index.jpg');
   background-size: cover;
   background-position: center;
   color: var(--light-text);
