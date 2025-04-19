@@ -140,10 +140,13 @@ a.btn:visited {
 }
 
 .logo a {
-  color: white;
+  color: var(--light-text);
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 700;
+}
+div.logo a:visited {
+  color: var(--light-text);
 }
 
 .nav-links {
@@ -153,12 +156,12 @@ a.btn:visited {
 }
 
 .nav-links a {
-  color: white;
+  color: var(--light-text);
   font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: white;
+  color: var(--light-text);
   text-decoration: underline;
 }
 
