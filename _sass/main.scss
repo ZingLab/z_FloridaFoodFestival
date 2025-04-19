@@ -64,6 +64,10 @@ a:hover {
   opacity: .9;
 }
 
+a:visited {
+  color: inherit;
+}
+
 .section {
   padding: 5rem 0;
 }
@@ -726,12 +730,12 @@ a:hover {
 }
 
 .event-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/assets/images/event-default-header.jpg');
+  background: #1a1a1a;
   background-size: cover;
   background-position: center;
   color: #fff;
-  padding: 5rem 0;
-  margin-bottom: 3rem;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
 }
 
 .event-header .container {
