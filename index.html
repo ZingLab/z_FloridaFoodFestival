@@ -7,17 +7,7 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
 {% include hero.html 
   title="Florida Food Festival"
   tagline="A Celebration of Florida's Culinary Delights"
-  dates="June 15-17, 2025"
-  location="Orlando, FL"
-  button_text="Get Your Tickets"
-  button_link="#tickets"
   background_image="/assets/images/index.jpg"
-%}
-
-{% include recent-posts.html
-    title="Upcoming Food Events"
-    description="Check out these exciting food and wine events coming to Florida in the near future."
-      limit=4
 %}
 
 {% include recent-posts.html 
@@ -27,15 +17,6 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
   limit=3 
   view_all_link="/recipes/" 
   view_all_text="Browse All Recipes" 
-%}
-
-{% include recent-posts.html 
-  title="Upcoming Events" 
-  description="Don't miss these exciting Florida food festivals" 
-  category="event" 
-  limit=3 
-  view_all_link="/events/" 
-  view_all_text="See All Events" 
 %}
 
 {% include about.html 
@@ -49,6 +30,9 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
   description="Check out these exciting food and wine events coming to Florida in the near future."
   limit=3
   background_class="alt-background"
+  category="event" 
+  view_all_link="/events/" 
+  view_all_text="See All Events" 
 %}
 
 {% include schedule.html 

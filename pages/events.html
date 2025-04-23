@@ -4,14 +4,12 @@ title: Upcoming Food & Wine Events
 permalink: /events/
 description: Discover and explore exciting food and wine events across Florida featuring local cuisine, chef demonstrations, tastings, and more.
 ---
-
 <section class="page-header">
   <div class="container">
     <h1>Florida Food Festival Events</h1>
     <p class="subtitle">Discover our upcoming food and wine celebrations</p>
   </div>
 </section>
-
 <section class="events-listing">
   <div class="container">
     <div class="events-filter">
@@ -19,9 +17,10 @@ description: Discover and explore exciting food and wine events across Florida f
       <button class="filter-btn" data-filter="upcoming">Upcoming</button>
       <button class="filter-btn" data-filter="past">Past Events</button>
     </div>
-    
+   
     <div class="events-grid">
       {% for post in site.posts %}
+      {% if post.category == "event" %}
       {% assign event_date_parts = post.event_dates | split: "," | first | split: " " %}
       {% assign event_month = event_date_parts[0] %}
       {% assign event_day = event_date_parts[1] | plus: 0 %}
@@ -31,8 +30,8 @@ description: Discover and explore exciting food and wine events across Florida f
       {% if event_date > current_date %}
         {% assign is_upcoming = true %}
       {% endif %}
-      
-      <div class="event-card {% if is_upcoming %}upcoming{% else %}past{% endif %}">
+     
+      <div class="event-card {% if is_upcoming %}upcoming{% else %}past{% endif %}" data-category="event">
         <div class="event-image">
           {% if post.featured_image %}
           <img src="{{ post.featured_image }}" alt="{{ post.title }}">
@@ -56,22 +55,22 @@ description: Discover and explore exciting food and wine events across Florida f
           <a href="{{ post.url }}" class="btn btn-small">View Details</a>
         </div>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
-    
+   
     <div class="pagination">
       {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
       {% endif %}
-      
+     
       {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path }}" class="next">Next</a>
       {% endif %}
     </div>
   </div>
 </section>
-
-{% include newsletter.html 
+{% include newsletter.html
   title="Stay Updated"
   description="Sign up for our newsletter to receive the latest festival updates and special offers."
 %}
