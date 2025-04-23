@@ -21,9 +21,9 @@ p { margin-bottom: 1rem; }
 
 a { color: var(--primary-color); text-decoration: none; transition: color 0.3s ease; }
 
-a:hover { text-decoration: underline; color: var(--light-text) !important; }
+a:hover { text-decoration: underline; color: #ffffff !important; }
 
-a:visited { color: var(--light-text) !important; }
+a:visited { color: #ffffff !important; }
 
 .section { padding: 3rem 0; }
 
