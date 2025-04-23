@@ -1,7 +1,7 @@
 ---
 layout: post
-category: recipe
-title: "Mexican Street Corn"
+category: [recipe]
+title: "Mexican Street Corn 1"
 featured_image: "/assets/images/events/mexican-street-corn.jpg"
 event_highlights:
   - title: "Fast and refreshing"
