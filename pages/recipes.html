@@ -1,0 +1,71 @@
+---
+layout: default
+title: Florida Recipes and Delicious Food
+permalink: /recipes/
+description: Discover delicious Florida-inspired recipes, cooking tips, and local culinary favorites to bring the taste of Florida to your kitchen.
+---
+<section class="page-header">
+  <div class="container">
+    <h1>Florida Recipe Collection</h1>
+    <p class="subtitle">Discover delicious dishes inspired by the Sunshine State</p>
+  </div>
+</section>
+<section class="recipes-listing">
+  <div class="container">
+    <div class="recipes-filter">
+      <button class="filter-btn active" data-filter="all">All Recipes</button>
+      <button class="filter-btn" data-filter="quick">Quick & Easy</button>
+      <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+    </div>
+   
+    <div class="recipes-grid">
+      {% for post in site.posts %}
+      {% if post.category == "recipe" %}
+      <div class="event-card recipe-card" data-category="recipe">
+        <div class="recipe-image">
+          {% if post.featured_image %}
+          <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+          {% else %}
+          <img src="/assets/images/recipes/default-recipe.jpg" alt="{{ post.title }}">
+          {% endif %}
+          <div class="recipe-badge">
+            <span class="recipe-type">Recipe</span>
+          </div>
+        </div>
+        <div class="recipe-details">
+          <h3 class="recipe-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <div class="recipe-highlights">
+            {% if post.event_highlights %}
+              {% for highlight in post.event_highlights limit:2 %}
+              <div class="highlight-item">
+                <span class="highlight-title">{{ highlight.title }}</span>
+                <span class="highlight-desc">{{ highlight.description }}</span>
+              </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="recipe-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 25 }}
+          </div>
+          <a href="{{ post.url }}" class="btn btn-small">View Recipe</a>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+   
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
+      {% endif %}
+     
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% include newsletter.html
+  title="Recipes In Your Inbox"
+  description="Sign up for our newsletter to receive recipes and cooking inspiration."
+%}

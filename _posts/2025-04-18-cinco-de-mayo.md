@@ -1,5 +1,6 @@
 ---
 layout: post
+category: event
 title: "Celebrate Cinco De Mayo"
 event_dates: "May 1 - 5, 2025"
 event_times: "12:30 PM - 6:00 PM"
