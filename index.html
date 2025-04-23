@@ -20,6 +20,24 @@ description: Join us for the annual Florida Food Festival, showcasing the finest
       limit=4
 %}
 
+{% include recent-posts.html 
+  title="Featured Recipes" 
+  description="Try these delicious Florida-inspired dishes" 
+  category="recipe" 
+  limit=3 
+  view_all_link="/recipes/" 
+  view_all_text="Browse All Recipes" 
+%}
+
+{% include recent-posts.html 
+  title="Upcoming Events" 
+  description="Don't miss these exciting Florida food festivals" 
+  category="event" 
+  limit=3 
+  view_all_link="/events/" 
+  view_all_text="See All Events" 
+%}
+
 {% include about.html 
   title="About the Festival"
   content="<p>The Florida Food Festival brings together the best culinary experiences Florida has to offer. From fresh seafood and citrus-inspired dishes to Caribbean-influenced cuisine and farm-to-table creations, our festival showcases the diverse flavors of the Sunshine State.</p>

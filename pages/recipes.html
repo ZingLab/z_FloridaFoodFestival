@@ -63,6 +63,29 @@ description: Discover delicious Florida-inspired recipes, cooking tips, and loca
       <a href="{{ paginator.next_page_path }}" class="next">Next</a>
       {% endif %}
     </div>
+
+
+    
+    <div class="recipes-grid">
+      <!-- Debug: Count total posts -->
+      <p>Total posts: {{ site.posts.size }}</p>
+      <!-- Debug: List all categories -->
+      <p>Categories found: 
+        {% for post in site.posts %}
+          {{ post.category }}, 
+        {% endfor %}
+      </p>
+      <!-- Main loop with more flexible matching -->
+      {% for post in site.posts %}
+        {% if post.category == "recipe" or post.categories contains "recipe" %}
+          <div class="event-card recipe-card" data-category="recipe">
+            <!-- Card content here -->
+            <p>Found recipe: {{ post.title }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
   </div>
 </section>
 {% include newsletter.html

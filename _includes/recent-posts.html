@@ -1,49 +1,90 @@
 <!-- _includes/recent-posts.html -->
 <section class="recent-posts-section {% if include.background_class %}{{ include.background_class }}{% endif %}">
-    <div class="container">
-      <h2 class="section-title">{{ include.title | default: "Upcoming Events" }}</h2>
-      {% if include.description %}
-      <p class="section-description">{{ include.description }}</p>
-      {% endif %}
+  <div class="container">
+    <h2 class="section-title">{{ include.title | default: "Recent Posts" }}</h2>
+    {% if include.description %}
+    <p class="section-description">{{ include.description }}</p>
+    {% endif %}
+   
+    <div class="recent-posts-grid">
+      {% assign post_limit = include.limit | default: 3 %}
+      {% assign post_category = include.category | default: "all" %}
+      {% assign displayed_posts = 0 %}
       
-      <div class="recent-posts-grid">
-        {% assign post_limit = include.limit | default: 3 %}
-        {% for post in site.posts limit: post_limit %}
-        {% assign event_date_parts = post.event_dates | split: "," | first | split: " " %}
-        {% assign event_month = event_date_parts[0] %}
-        {% assign event_day = event_date_parts[1] | plus: 0 %}
-        
-        <div class="post-card">
-          <div class="post-image">
-            {% if post.featured_image %}
-            <img src="{{ post.featured_image }}" alt="{{ post.title }}">
-            {% else %}
-            <img src="/assets/images/events/default-event.jpg" alt="{{ post.title }}">
-            {% endif %}
-            <div class="post-date">
-              <span class="month">{{ event_month }}</span>
-              <span class="day">{{ event_day }}</span>
+      {% for post in site.posts %}
+        {% if displayed_posts < post_limit %}
+          {% if post_category == "all" or post.category == post_category %}
+            {% assign displayed_posts = displayed_posts | plus: 1 %}
+            
+            <div class="post-card" data-category="{{ post.category }}">
+              <div class="post-image">
+                {% if post.featured_image %}
+                <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+                {% else %}
+                  {% if post.category == "recipe" %}
+                  <img src="/assets/images/recipes/default-recipe.jpg" alt="{{ post.title }}">
+                  {% else %}
+                  <img src="/assets/images/events/default-event.jpg" alt="{{ post.title }}">
+                  {% endif %}
+                {% endif %}
+                
+                {% if post.category == "event" %}
+                  {% assign event_date_parts = post.event_dates | split: "," | first | split: " " %}
+                  {% assign event_month = event_date_parts[0] %}
+                  {% assign event_day = event_date_parts[1] | plus: 0 %}
+                  <div class="post-date">
+                    <span class="month">{{ event_month }}</span>
+                    <span class="day">{{ event_day }}</span>
+                  </div>
+                {% else %}
+                  <div class="post-badge">
+                    <span class="post-type">{{ post.category | capitalize }}</span>
+                  </div>
+                {% endif %}
+              </div>
+              
+              <div class="post-details">
+                <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                
+                {% if post.category == "event" %}
+                  <div class="post-meta">
+                    <span class="post-dates">{{ post.event_dates }}</span>
+                    <span class="post-location">{{ post.location }}</span>
+                  </div>
+                {% elsif post.category == "recipe" and post.event_highlights %}
+                  <div class="post-highlights">
+                    {% for highlight in post.event_highlights limit:2 %}
+                    <div class="highlight-item">
+                      <span class="highlight-title">{{ highlight.title }}</span>
+                    </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                
+                <div class="post-excerpt">
+                  {{ post.excerpt | strip_html | truncatewords: 20 }}
+                </div>
+                
+                <a href="{{ post.url }}" class="btn btn-small">
+                  {% if post.category == "recipe" %}View Recipe{% else %}Learn More{% endif %}
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="post-details">
-            <h3 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <div class="post-meta">
-              <span class="post-dates">{{ post.event_dates }}</span>
-              <span class="post-location">{{ post.location }}</span>
-            </div>
-            <div class="post-excerpt">
-              {{ post.excerpt | strip_html | truncatewords: 20 }}
-            </div>
-            <a href="{{ post.url }}" class="btn btn-small">Learn More</a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      
-      {% if include.show_view_all != false %}
-      <div class="view-all-link">
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+   
+    {% if include.show_view_all != false %}
+    <div class="view-all-link">
+      {% if post_category == "recipe" %}
+        <a href="{{ include.view_all_link | default: '/recipes/' }}" class="btn">{{ include.view_all_text | default: "View All Recipes" }}</a>
+      {% elsif post_category == "event" %}
         <a href="{{ include.view_all_link | default: '/events/' }}" class="btn">{{ include.view_all_text | default: "View All Events" }}</a>
-      </div>
+      {% else %}
+        <a href="{{ include.view_all_link | default: '/blog/' }}" class="btn">{{ include.view_all_text | default: "View All Posts" }}</a>
       {% endif %}
     </div>
-  </section>
+    {% endif %}
+  </div>
+</section>
