@@ -47,7 +47,7 @@ a.btn:visited { color: var(--light-text); }
 
 .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
 
-.logo a { color: var(--light-text); text-decoration: none; font-size: 1.8rem; font-weight: 700; }
+.logo a { color: var(--light-text); text-decoration: none; font-size: 1.5rem; font-weight: 700; }
 
 div.logo a:visited { color: var(--light-text); }
 
@@ -218,7 +218,7 @@ div.logo a:visited { color: var(--light-text); }
 
 .day { display: block; font-size: 1.5rem; font-weight: 700; }
 
-.event-details { padding: 1.5rem; }
+.event-details { padding: 0; }
 
 .event-title { margin-bottom: 1rem; font-size: 1.4rem; }
 
@@ -251,7 +251,7 @@ div.logo a:visited { color: var(--light-text); }
 /* Individual Event Post Page Styles */
 .event-post { margin-bottom: 4rem; }
 
-.event-header { background: #1a1a1a; background-size: cover; background-position: center; color: #fff; padding: 2rem 0; margin-bottom: 1rem; }
+.event-header { background-size: cover; background-position: center; margin: .5em; }
 
 .event-header .container { max-width: 800px; }
 
@@ -263,9 +263,9 @@ div.logo a:visited { color: var(--light-text); }
 
 .event-content { max-width: 800px; margin: 0 auto 3rem; }
 
-.event-featured-image { margin-bottom: 2rem; }
+.event-featured-image { margin-bottom: .5em; }
 
-.event-featured-image img { width: 100%; border-radius: 8px; }
+.event-featured-image img { width: 100%; border-radius: 8px; max-width: 300px; }
 
 .event-description { font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; }
 
@@ -275,9 +275,9 @@ div.logo a:visited { color: var(--light-text); }
 
 .event-highlights ul, .food-offerings ul { list-style: none; }
 
-.event-highlights li { margin-bottom: 1.5rem; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); }
+.event-highlights li { margin-bottom: 1rem; background: #f9f9f9; padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary-color); }
 
-.event-highlights h3 { margin-bottom: 0.5rem; color: var(--primary-color); }
+.event-highlights h3 { margin-bottom: 0.5rem; color: var(--primary-color); font-size: 1.5rem; }
 
 .food-offerings li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
 
@@ -285,11 +285,11 @@ div.logo a:visited { color: var(--light-text); }
 
 .event-cta { text-align: center; margin-top: 3rem; }
 
-.event-cta .btn { margin: 0 0.5rem; }
+.event-cta .btn { margin: .5rem; }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) { .events-grid { grid-template-columns: 1fr; }
-  .event-header { padding: 3rem 0; }
+  .event-header { padding: .5em 0; }
   .event-title { font-size: 2.2rem; }
   .subscription-form { flex-direction: column; }
   .subscription-form input, .subscription-form button { width: 100%; border-radius: 4px; }
