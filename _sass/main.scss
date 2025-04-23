@@ -63,11 +63,11 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #ffffff !important;
+  color: var(--light-text);
 }
 
 a:visited {
-  color: #ffffff !important;
+  color: var(--light-text);
 }
 
 .section {
