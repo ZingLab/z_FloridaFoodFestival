@@ -54,34 +54,71 @@
 <body>
   <!-- _includes/nav.html -->
 <header class="nav" style="background-color: #1a1a1a;">
-    <div class="container">
-      <nav class="main-nav">
-        <div class="logo">
-          <a href="/">Florida Food Festival</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="/#about">About</a></li>
-          <li><a href="/events/">Events</a></li>
-          <li><a href="/special-events/">Special Events</a></li>
-          <li><a href="/recipes/">Location</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="/">Florida Food Festival</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/special-events/">Special Events</a></li>
+        <li><a href="/recipes/">Location</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links li');
+  
+  hamburger.addEventListener('click', function() {
+    // Toggle hamburger menu animation
+    this.classList.toggle('active');
+    
+    // Toggle navigation menu
+    navLinks.classList.toggle('active');
+    
+    // Add animation to nav items
+    navItems.forEach(function(item, index) {
+      item.style.setProperty('--i', index);
+      if (item.style.animation) {
+        item.style.animation = '';
+      } else {
+        item.style.animation = 'fadeInItem 0.5s forwards';
+      }
+    });
+  });
+  
+  // Close menu when clicking on a nav link
+  navItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      navItems.forEach(function(item) {
+        item.style.animation = '';
+      });
+    });
+  });
+});
+</script>
 
   <section class="page-header">
   <div class="container">
-    <h1>Florida Recipe Collection</h1>
-    <p class="subtitle">Discover delicious dishes inspired by the Sunshine State</p>
+    <h1>Our Favorite Recipes</h1>
+    <p class="subtitle">Discover delicious dishes from across the Sunshine State</p>
   </div>
 </section>
 <section class="recipes-listing">
   <div class="container">
-    <div class="recipes-filter">
-      <button class="filter-btn active" data-filter="all">All Recipes</button>
-      <button class="filter-btn" data-filter="quick">Quick & Easy</button>
-      <button class="filter-btn" data-filter="seasonal">Seasonal</button>
-    </div>
+
    
     <div class="recipes-grid">
       
@@ -97,7 +134,7 @@
         </div>
         <div class="recipe-details">
           <h3 class="recipe-title"><a href="/events/2025/04/23/mexican-street-corn/">Mexican Street Corn 3</a></h3>
-          <div class="recipe-highlights">
+          <!--<div class="recipe-highlights">
             
               
               <div class="highlight-item">
@@ -111,7 +148,7 @@
               </div>
               
             
-          </div>
+          </div>-->
           <div class="recipe-excerpt">
             Mexican Street Corn (Elote) The Cultural Heritage of Elote Winding through the bustling streets of Mexico City, the aroma of charred corn wafts through the...
           </div>
@@ -132,7 +169,7 @@
         </div>
         <div class="recipe-details">
           <h3 class="recipe-title"><a href="/events/2025/04/22/mexican-street-corn/">Mexican Street Corn 1</a></h3>
-          <div class="recipe-highlights">
+          <!--<div class="recipe-highlights">
             
               
               <div class="highlight-item">
@@ -146,7 +183,7 @@
               </div>
               
             
-          </div>
+          </div>-->
           <div class="recipe-excerpt">
             Mexican Street Corn (Elote) The Cultural Heritage of Elote Winding through the bustling streets of Mexico City, the aroma of charred corn wafts through the...
           </div>
@@ -167,7 +204,7 @@
         </div>
         <div class="recipe-details">
           <h3 class="recipe-title"><a href="/events/2025/04/21/mexican-street-corn/">Mexican Street Corn 2</a></h3>
-          <div class="recipe-highlights">
+          <!--<div class="recipe-highlights">
             
               
               <div class="highlight-item">
@@ -181,7 +218,7 @@
               </div>
               
             
-          </div>
+          </div>-->
           <div class="recipe-excerpt">
             Mexican Street Corn (Elote) The Cultural Heritage of Elote Winding through the bustling streets of Mexico City, the aroma of charred corn wafts through the...
           </div>
@@ -197,50 +234,6 @@
     <div class="pagination">
       
      
-      
-    </div>
-
-
-    
-    <div class="recipes-grid">
-      <!-- Debug: Count total posts -->
-      <p>Total posts: 4</p>
-      <!-- Debug: List all categories -->
-      <p>Categories found: 
-        
-          recipe, 
-        
-          recipe, 
-        
-          recipe, 
-        
-          event, 
-        
-      </p>
-      <!-- Main loop with more flexible matching -->
-      
-        
-          <div class="event-card recipe-card" data-category="recipe">
-            <!-- Card content here -->
-            <p>Found recipe: Mexican Street Corn 3</p>
-          </div>
-        
-      
-        
-          <div class="event-card recipe-card" data-category="recipe">
-            <!-- Card content here -->
-            <p>Found recipe: Mexican Street Corn 1</p>
-          </div>
-        
-      
-        
-          <div class="event-card recipe-card" data-category="recipe">
-            <!-- Card content here -->
-            <p>Found recipe: Mexican Street Corn 2</p>
-          </div>
-        
-      
-        
       
     </div>
 

@@ -54,20 +54,61 @@
 <body>
   <!-- _includes/nav.html -->
 <header class="nav" style="background-color: #1a1a1a;">
-    <div class="container">
-      <nav class="main-nav">
-        <div class="logo">
-          <a href="/">Florida Food Festival</a>
-        </div>
-        <ul class="nav-links">
-          <li><a href="/#about">About</a></li>
-          <li><a href="/events/">Events</a></li>
-          <li><a href="/special-events/">Special Events</a></li>
-          <li><a href="/recipes/">Location</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="/">Florida Food Festival</a>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/special-events/">Special Events</a></li>
+        <li><a href="/recipes/">Location</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links li');
+  
+  hamburger.addEventListener('click', function() {
+    // Toggle hamburger menu animation
+    this.classList.toggle('active');
+    
+    // Toggle navigation menu
+    navLinks.classList.toggle('active');
+    
+    // Add animation to nav items
+    navItems.forEach(function(item, index) {
+      item.style.setProperty('--i', index);
+      if (item.style.animation) {
+        item.style.animation = '';
+      } else {
+        item.style.animation = 'fadeInItem 0.5s forwards';
+      }
+    });
+  });
+  
+  // Close menu when clicking on a nav link
+  navItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      navItems.forEach(function(item) {
+        item.style.animation = '';
+      });
+    });
+  });
+});
+</script>
 
   <section class="page-header">
   <div class="container">
@@ -78,7 +119,7 @@
 <section class="content-section">
   <div class="container">
     <div class="policy-content">
-      <p><strong>Last Updated:</strong> April 23, 2025</p>
+      <p><strong>Last Updated:</strong> April 24, 2025</p>
       
       <h2>Introduction</h2>
       <p>Welcome to the Florida Food Festival website. These Terms of Service ("Terms") govern your access to and use of floridafoodfestival.com (the "Site"). By accessing or using our Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Site.</p>
