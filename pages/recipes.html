@@ -6,17 +6,13 @@ description: Discover delicious Florida-inspired recipes, cooking tips, and loca
 ---
 <section class="page-header">
   <div class="container">
-    <h1>Florida Recipe Collection</h1>
-    <p class="subtitle">Discover delicious dishes inspired by the Sunshine State</p>
+    <h1>Our Favorite Recipes</h1>
+    <p class="subtitle">Discover delicious dishes from across the Sunshine State</p>
   </div>
 </section>
 <section class="recipes-listing">
   <div class="container">
-    <div class="recipes-filter">
-      <button class="filter-btn active" data-filter="all">All Recipes</button>
-      <button class="filter-btn" data-filter="quick">Quick & Easy</button>
-      <button class="filter-btn" data-filter="seasonal">Seasonal</button>
-    </div>
+
    
     <div class="recipes-grid">
       {% for post in site.posts %}
@@ -34,7 +30,7 @@ description: Discover delicious Florida-inspired recipes, cooking tips, and loca
         </div>
         <div class="recipe-details">
           <h3 class="recipe-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-          <div class="recipe-highlights">
+          <!--<div class="recipe-highlights">
             {% if post.event_highlights %}
               {% for highlight in post.event_highlights limit:2 %}
               <div class="highlight-item">
@@ -43,7 +39,7 @@ description: Discover delicious Florida-inspired recipes, cooking tips, and loca
               </div>
               {% endfor %}
             {% endif %}
-          </div>
+          </div>-->
           <div class="recipe-excerpt">
             {{ post.excerpt | strip_html | truncatewords: 25 }}
           </div>
@@ -62,28 +58,6 @@ description: Discover delicious Florida-inspired recipes, cooking tips, and loca
       {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path }}" class="next">Next</a>
       {% endif %}
-    </div>
-
-
-    
-    <div class="recipes-grid">
-      <!-- Debug: Count total posts -->
-      <p>Total posts: {{ site.posts.size }}</p>
-      <!-- Debug: List all categories -->
-      <p>Categories found: 
-        {% for post in site.posts %}
-          {{ post.category }}, 
-        {% endfor %}
-      </p>
-      <!-- Main loop with more flexible matching -->
-      {% for post in site.posts %}
-        {% if post.category == "recipe" or post.categories contains "recipe" %}
-          <div class="event-card recipe-card" data-category="recipe">
-            <!-- Card content here -->
-            <p>Found recipe: {{ post.title }}</p>
-          </div>
-        {% endif %}
-      {% endfor %}
     </div>
 
   </div>
