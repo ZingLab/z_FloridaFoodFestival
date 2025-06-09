@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: event
 category: event
 title: "Celebrate Cinco De Mayo"
 event_dates: "May 1 - 5, 2025"
