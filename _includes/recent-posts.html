@@ -9,13 +9,20 @@
     <div class="recent-posts-grid">
       {% assign post_limit = include.limit | default: 3 %}
       {% assign post_category = include.category | default: "all" %}
-      {% assign displayed_posts = 0 %}
-      
-      {% for post in site.posts %}
-        {% if displayed_posts < post_limit %}
-          {% if post_category == "all" or post.category == post_category %}
-            {% assign displayed_posts = displayed_posts | plus: 1 %}
-            
+
+      {%- comment -%} Build a collection filtered by category {%- endcomment -%}
+      {% if post_category == "all" %}
+        {% assign posts_collection = site.posts %}
+      {% else %}
+        {% assign posts_collection = site.posts | where: "category", post_category %}
+      {% endif %}
+
+      {%- comment -%} Support random selection when `random=true` or `order="random"` is passed {%- endcomment -%}
+      {% if include.random == true or include.random == "true" or include.order == "random" %}
+        {% assign posts_collection = posts_collection | shuffle %}
+      {% endif %}
+
+      {% for post in posts_collection limit: post_limit %}
             <div class="post-card" data-category="{{ post.category }}">
               <div class="post-image">
                 {% if post.featured_image %}

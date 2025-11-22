@@ -1,6 +1,87 @@
----
----
 
 @import "variables" ;
 @import "main" ;
 //@import "minima" ;
+
+
+
+
+/* Responsive heading sizes for desktop and mobile
+	 Uses clamp() so headings scale smoothly with viewport width.
+	 Tweak values here if you want larger/smaller headings site-wide. */
+h1 {
+	font-size: 1.75rem;
+	line-height: 1.08;
+	margin-bottom: 0.5em;
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 1.12;
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 1.25rem;
+	line-height: 1.18;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+	font-size: 1.125rem;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+	font-size: 1rem;
+    margin-bottom: 0.5em;
+}
+
+h6 {
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+/* Optional: make site title / hero headings a bit bolder on large screens */
+.hero h1, .site-title, .post-title {
+	font-weight: 600;
+}
+
+ul + h1, ol + h1, p + h1 {
+  margin-top: 1.5rem;
+}
+
+ul + h2, ol + h2, p + h2 {
+  margin-top: 1.5rem;
+}
+
+ul + h3, ol + h3, p + h3 {
+  margin-top: 1.5rem;
+}
+
+ul + h4, ol + h4, p + h4 {
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links.active {
+    right: 0;
+    display: flex;
+  }
+}
+
+body.page-header {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),url("./assets/images/recipes/datil-pepper-wings.jpg") no-repeat center center;
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-size: auto, auto;
+}
+
+.newsletter-embed {
+  display: inline-block;
+  width: 100%;
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 10px;
+}

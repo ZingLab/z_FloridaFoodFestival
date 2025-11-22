@@ -77,17 +77,5 @@ exclude:
   - gemfiles
   - README.md
 
-# SEO Tag settings
-twitter:
-  username: flafoodfest
-  card: summary_large_image
-logo: /assets/images/favicon.png
-social:
-  name: Florida Food Festival
-  links:
-    - https://twitter.com/flafoodfest
-    - https://www.facebook.com/floridafoodfestival
-    - https://www.instagram.com/flafoodfestival
-
 # Google Analytics
 google_analytics: G-DW82LSZY3F

@@ -11,19 +11,16 @@
             <h4>{{ include.quick_links_title | default: "Quick Links" }}</h4>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/about/">About</a></li>
               <li><a href="/recipes/">Recipes</a></li>
-              <li><a href="/events/">Events</a></li>
-              <li><a href="/special-events/">Special Events</a></li>
             </ul>
           </div>
           <div class="link-group">
-            <h4>{{ include.info_links_title | default: "Information" }}</h4>
+            <h4>Buy FloridaFoodFestival</h4>
             <ul>
-              <li><a href="/contact">Sponsors</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><a href="mailto:hi@zinglab.com">Email us for info</a></li>
             </ul>
           </div>
+<!--
           <div class="link-group">
             <h4>{{ include.social_links_title | default: "Follow Us" }}</h4>
             <div class="social-links">
@@ -32,10 +29,11 @@
               <a href="{{ include.twitter_url | default: '#' }}" aria-label="Bluesky">BS</a>
             </div>
           </div>
+-->
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; {{ 'now' | date: "%Y" }} {{ include.copyright_name | default: "ZingLab LLC" }}. All rights reserved.</p>
+        <p>&copy; {{ 'now' | date: "%Y" }} <a href="https://zinglab.com/?ref=flafoodfest">{{ include.copyright_name | default: "ZingLab LLC" }}</a>. All rights reserved.</p>
         <div class="legal-links">
           <a href="/privacy/">Privacy Policy</a>
           <a href="/terms/">Terms of Service</a>
