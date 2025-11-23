@@ -1,1 +1,18 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.bundle/
+vendor/bundle/  
+
+# Ruby gems
+*.gem
+# Ignore log files and tempfiles.
+*.log
+tmp/
+# Ignore Mac system files
 .DS_Store
+# Ignore VSCode settings
+.vscode/
+# Ignore node modules
+node_modules/
