@@ -4,6 +4,7 @@ _site/
 .jekyll-cache/
 .bundle/
 vendor/bundle/  
+Gemfile.lock
 
 # Ruby gems
 *.gem
