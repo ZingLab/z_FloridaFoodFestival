@@ -9,7 +9,7 @@ event_highlights:
   - title: "Seafood Comfort"
     description: "A Florida favorite for cool summer nights."
 description: "Sweet crab and corn in a velvety chowder."
-
+keywords: "crab corn chowder, Gulf Coast chowder, Florida seafood soup, crab chowder recipe, corn chowder, creamy seafood soup, Florida crab recipe, summer chowder, coastal comfort food"
 ---
 
 # Gulf Coast Crab & Corn Chowder

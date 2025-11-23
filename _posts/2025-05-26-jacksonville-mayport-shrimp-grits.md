@@ -9,7 +9,7 @@ event_highlights:
   - title: "North Florida Staple"
     description: "A beloved dish from Jacksonville's historic port."
 description: "Creamy grits topped with sautéed Mayport shrimp."
-
+keywords: "Mayport shrimp and grits, Jacksonville shrimp grits, Florida shrimp recipe, creamy grits, coastal comfort food, North Florida recipe, shrimp and grits recipe, Southern breakfast, First Coast cuisine"
 ---
 
 # Jacksonville Mayport Shrimp & Grits

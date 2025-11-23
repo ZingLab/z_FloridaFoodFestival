@@ -9,7 +9,7 @@ event_highlights:
   - title: "Quick Breakfast"
     description: "A healthy start to your summer day."
 description: "Creamy Florida avocado, juicy tomato, and zesty lime."
-
+keywords: "Florida avocado toast, avocado toast recipe, healthy breakfast, tomato lime avocado, summer breakfast, quick breakfast recipe, avocado breakfast, Florida avocado, nutritious toast"
 ---
 
 # Florida Avocado Toast with Tomato & Lime

@@ -9,7 +9,7 @@ event_highlights:
   - title: "Coastal Comfort Food"
     description: "A North Florida winter favorite."
 description: "Fresh Apalachicola oysters in a rich, creamy broth."
-
+keywords: "Apalachicola oyster stew, Florida oyster recipe, creamy oyster stew, Gulf Coast oysters, oyster soup, coastal comfort food, North Florida seafood, winter stew, oyster chowder"
 ---
 
 # Apalachicola Oyster Stew

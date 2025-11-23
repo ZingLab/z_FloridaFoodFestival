@@ -9,7 +9,7 @@ event_highlights:
   - title: "Beachside Snack"
     description: "A Gulf Coast favorite for gatherings."
 description: "Classic North Florida fish dip with crackers."
-
+keywords: "smoked mullet dip, Pensacola fish dip, Florida mullet recipe, smoked fish dip, Gulf Coast appetizer, North Florida dip, beach party food, seafood dip, Panhandle recipe"
 ---
 
 # Pensacola Smoked Mullet Dip

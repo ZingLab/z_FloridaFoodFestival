@@ -9,7 +9,7 @@ event_highlights:
   - title: "Retro Summer Dessert"
     description: "A showstopper for any gathering."
 description: "Caramelized pineapple and cherries on a buttery cake."
-
+keywords: "pineapple upside-down cake, tropical cake recipe, Florida dessert, retro cake, pineapple cake, classic dessert, caramelized pineapple, summer cake, showstopper dessert"
 ---
 
 # Sunshine Pineapple Upside-Down Cake

@@ -9,7 +9,7 @@ event_highlights:
   - title: "Soul Food Classic"
     description: "A North Florida comfort food staple."
 description: "Slow-simmered collards with smoky bacon."
-
+keywords: "Suwannee River collard greens, Southern collard greens, North Florida soul food, collard greens recipe, slow-cooked greens, bacon collards, Southern side dish, comfort food greens, traditional collards"
 ---
 
 # Suwannee River Collard Greens

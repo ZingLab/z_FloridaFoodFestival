@@ -9,7 +9,7 @@ event_highlights:
   - title: "Healthy & Colorful"
     description: "A vibrant side or light lunch."
 description: "Black beans, mango, and veggies in a tangy lime dressing."
-
+keywords: "Cuban black bean salad, black bean mango salad, Florida mango recipe, healthy salad recipe, lime dressing, tropical salad, Cuban cuisine, vegetarian salad, colorful side dish"
 ---
 
 # Cuban Black Bean & Mango Salad

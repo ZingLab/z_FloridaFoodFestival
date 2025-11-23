@@ -9,7 +9,7 @@ event_highlights:
   - title: "Game Day Favorite"
     description: "A North Florida tradition for tailgates and picnics."
 description: "Classic roadside snack, soft and savory."
-
+keywords: "Gainesville boiled peanuts, Florida boiled peanuts, Southern snack, roadside peanuts, game day snack, tailgate food, North Florida tradition, salty peanuts, boiled peanuts recipe"
 ---
 
 # Gainesville Boiled Peanuts

@@ -9,7 +9,7 @@ event_highlights:
   - title: "Picnic Perfect"
     description: "A classic dessert in a mason jar."
 description: "Layers of cake, whipped cream, and juicy strawberries."
-
+keywords: "strawberry shortcake jars, Florida strawberries, mason jar dessert, portable dessert, picnic dessert, strawberry shortcake recipe, layered dessert, summer dessert, strawberry recipe"
 ---
 
 # Florida Strawberry Shortcake Jars

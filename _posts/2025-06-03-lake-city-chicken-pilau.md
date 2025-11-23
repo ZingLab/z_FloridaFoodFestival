@@ -9,7 +9,7 @@ event_highlights:
   - title: "Family Tradition"
     description: "A comforting dish for gatherings and potlucks."
 description: "Savory chicken and rice with North Florida roots."
-
+keywords: "Lake City chicken pilau, chicken perloo, Florida pilau recipe, North Florida chicken rice, one-pot chicken, Southern rice dish, chicken and rice, family comfort food, pilau recipe"
 ---
 
 # Lake City Chicken Pilau (Perloo)

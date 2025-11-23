@@ -9,7 +9,7 @@ event_highlights:
   - title: "Riverfront Favorite"
     description: "Inspired by North Florida's St. Johns River."
 description: "Fried catfish fillets on a soft roll with tangy remoulade."
-
+keywords: "catfish po boy, St. Johns River catfish, fried catfish sandwich, North Florida recipe, po boy recipe, Southern sandwich, catfish recipe, remoulade sauce, Florida fish sandwich"
 ---
 
 # St. Johns River Catfish Po' Boys

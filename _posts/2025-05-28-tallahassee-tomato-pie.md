@@ -9,7 +9,7 @@ event_highlights:
   - title: "Southern Garden Classic"
     description: "A North Florida summer favorite."
 description: "Fresh tomatoes, herbs, and cheese in a flaky crust."
-
+keywords: "Tallahassee tomato pie, Southern tomato pie, savory pie recipe, fresh tomato recipe, North Florida recipe, summer tomato dish, cheesy tomato pie, garden tomatoes, Southern comfort food"
 ---
 
 # Tallahassee Tomato Pie

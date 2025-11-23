@@ -9,7 +9,7 @@ event_highlights:
   - title: "No Cooking Needed"
     description: "Blend and chill for a cool summer starter."
 description: "A sweet and savory soup with mango, pineapple, and cucumber."
-
+keywords: "tropical fruit gazpacho, Florida gazpacho recipe, cold fruit soup, mango pineapple soup, summer soup recipe, no-cook soup, chilled gazpacho, tropical soup, refreshing summer starter"
 ---
 
 # Tropical Fruit Gazpacho

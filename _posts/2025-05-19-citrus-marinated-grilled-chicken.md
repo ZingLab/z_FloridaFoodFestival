@@ -9,7 +9,7 @@ event_highlights:
   - title: "Grill Favorite"
     description: "Perfect for backyard barbecues."
 description: "Chicken marinated in orange, lime, and herbs. Perfect for backyard barbecues."
-
+keywords: "citrus grilled chicken, Florida citrus chicken, orange lime marinade, grilled chicken recipe, citrus marinade, backyard barbecue, summer grilling recipe, Florida chicken recipe, juicy grilled chicken"
 ---
 
 # Citrus Marinated Grilled Chicken

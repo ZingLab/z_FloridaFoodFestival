@@ -9,7 +9,7 @@ event_highlights:
   - title: "Southern Comfort"
     description: "A classic Florida fair and picnic snack."
 description: "Fried corn fritters with a hint of spice. A classic Florida fair and picnic snack."
-
+keywords: "Florida corn fritters, sweet corn fritters recipe, fried corn fritters, Southern corn fritters, crispy corn cakes, Florida fair food, corn appetizer, cornmeal fritters, summer snack recipe"
 ---
 
 # Florida Sweet Corn Fritters

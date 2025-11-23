@@ -9,7 +9,7 @@ event_highlights:
   - title: "Amelia Island Classic"
     description: "A North Florida beach favorite."
 description: "Fresh shrimp salad in a soft roll, perfect for summer."
-
+keywords: "Fernandina Beach shrimp rolls, shrimp salad sandwich, Amelia Island recipe, Florida shrimp recipe, cold shrimp salad, beach lunch, coastal sandwich, summer sandwich, North Florida seafood"
 ---
 
 # Fernandina Beach Shrimp Salad Rolls
