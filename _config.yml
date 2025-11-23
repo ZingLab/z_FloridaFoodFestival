@@ -9,6 +9,8 @@ url: "https://floridafoodfestival.com" # the base hostname & protocol
 twitter_username: flafoodfest
 github_username: floridafoodfestival
 author: Florida Food Festival Team
+og_image: /assets/images/header-bg.jpg
+keywords: "Florida, food festival, recipes, events, seafood, citrus, local produce"
 
 # Build settings
 markdown: kramdown
