@@ -8,6 +8,8 @@ event_highlights:
     description: "Fried corn fritters with a hint of spice."
   - title: "Southern Comfort"
     description: "A classic Florida fair and picnic snack."
+description: "Fried corn fritters with a hint of spice. A classic Florida fair and picnic snack."
+
 ---
 
 # Florida Sweet Corn Fritters

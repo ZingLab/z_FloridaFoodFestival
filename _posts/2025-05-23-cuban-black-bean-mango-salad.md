@@ -8,6 +8,8 @@ event_highlights:
     description: "Black beans, mango, and veggies in a tangy lime dressing."
   - title: "Healthy & Colorful"
     description: "A vibrant side or light lunch."
+description: "Black beans, mango, and veggies in a tangy lime dressing."
+
 ---
 
 # Cuban Black Bean & Mango Salad

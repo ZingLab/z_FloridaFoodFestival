@@ -8,6 +8,8 @@ event_highlights:
     description: "Creamy grits topped with sautéed Mayport shrimp."
   - title: "North Florida Staple"
     description: "A beloved dish from Jacksonville's historic port."
+description: "Creamy grits topped with sautéed Mayport shrimp."
+
 ---
 
 # Jacksonville Mayport Shrimp & Grits

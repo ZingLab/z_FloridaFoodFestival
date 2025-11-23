@@ -8,6 +8,8 @@ event_highlights:
     description: "Classic North Florida fish dip with crackers."
   - title: "Beachside Snack"
     description: "A Gulf Coast favorite for gatherings."
+description: "Classic North Florida fish dip with crackers."
+
 ---
 
 # Pensacola Smoked Mullet Dip

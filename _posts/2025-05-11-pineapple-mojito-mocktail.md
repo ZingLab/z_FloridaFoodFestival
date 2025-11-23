@@ -8,6 +8,8 @@ event_highlights:
     description: "Pineapple, mint, and lime in a sparkling, non-alcoholic drink."
   - title: "Family-Friendly Sip"
     description: "A cool beverage for all ages."
+description: "A refreshing non-alcoholic pineapple mojito mocktail featuring fresh pineapple, mint, lime, and sparkling water—perfect for summer parties and family-friendly sipping."
+keywords: "pineapple mojito mocktail, pineapple mocktail, mojito mocktail, non-alcoholic cocktail, refreshing summer drink, mint lime, family-friendly beverage, tropical drink, pineapple recipe"
 ---
 
 # Pineapple Mojito Mocktail

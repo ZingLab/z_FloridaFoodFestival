@@ -22,6 +22,8 @@ food_offerings:
   - "Blood Orange Margaritas"
   - "Craft beer and specialty cocktails"
   - "Cheese Enchiladas (Special menu item, available from 12:30 PM until close)"
+description: "insert brief food description here"
+
 ---
 
 Join us for a vibrant celebration of Mexican culture and cuisine at our Cinco De Mayo festival! For five days, experience the sights, sounds, and flavors of Mexico right here in Florida.

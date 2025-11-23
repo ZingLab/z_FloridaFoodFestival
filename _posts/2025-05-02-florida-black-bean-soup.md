@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Black Bean Soup"
 featured_image: "/assets/images/recipes/black-bean-soup.jpg"
+description: "A Cuban-inspired Florida black bean soup — hearty, citrus-kissed, and packed with vegetables and protein."
+keywords: "black bean soup, Cuban black bean soup, Florida recipe, vegetarian soup, easy soup recipe, lime, cilantro, hearty"
 event_highlights:
   - title: "Hearty & Wholesome"
     description: "A Cuban-inspired soup packed with flavor and nutrition."

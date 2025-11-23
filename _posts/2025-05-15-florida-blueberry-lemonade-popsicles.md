@@ -8,6 +8,8 @@ event_highlights:
     description: "Sweet blueberries and tart lemonade frozen into a summer treat."
   - title: "Kid-Friendly"
     description: "Easy to make and perfect for hot days."
+description: "Sweet, tangy frozen pops made with fresh Florida blueberries and lemon juice — a kid-friendly, refreshing summer treat."
+keywords: "Florida blueberries, blueberry lemonade popsicles, blueberry popsicles, homemade popsicles, lemonade recipe, frozen treats, summer desserts, kid-friendly recipes, easy popsicle recipe"
 ---
 
 # Florida Blueberry Lemonade Popsicles

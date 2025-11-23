@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Shrimp and Grits"
 featured_image: "/assets/images/recipes/shrimp-and-grits.jpg"
+description: "Florida Shrimp and Grits features creamy, cheesy grits topped with succulent Gulf shrimp sautéed in a savory sauce—a comforting Southern classic with a coastal Florida twist."
+keywords: "shrimp and grits, Florida shrimp, Southern comfort food, Gulf seafood, easy shrimp recipe, grits, coastal cuisine, Florida recipes"
 event_highlights:
   - title: "Southern Comfort"
     description: "Creamy grits topped with juicy Gulf shrimp and a savory sauce."

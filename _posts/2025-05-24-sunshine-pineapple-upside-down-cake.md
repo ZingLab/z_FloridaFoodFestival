@@ -8,6 +8,8 @@ event_highlights:
     description: "Caramelized pineapple and cherries on a buttery cake."
   - title: "Retro Summer Dessert"
     description: "A showstopper for any gathering."
+description: "Caramelized pineapple and cherries on a buttery cake."
+
 ---
 
 # Sunshine Pineapple Upside-Down Cake

@@ -8,6 +8,8 @@ event_highlights:
     description: "Crispy wings tossed in a tangy datil pepper sauce."
   - title: "Historic Florida Flavor"
     description: "A nod to St. Augustine’s famous datil peppers."
+description: "Crispy chicken wings tossed in a sweet-and-spicy St. Augustine datil pepper sauce—perfect for game day or summer cookouts."
+keywords: "datil pepper wings, St. Augustine recipes, spicy chicken wings, datil pepper sauce, Florida food, game day appetizers, honey datil wings, baked wings"
 ---
 
 # St. Augustine Datil Pepper Chicken Wings

@@ -8,6 +8,8 @@ event_highlights:
     description: "Fresh tomatoes, herbs, and cheese in a flaky crust."
   - title: "Southern Garden Classic"
     description: "A North Florida summer favorite."
+description: "Fresh tomatoes, herbs, and cheese in a flaky crust."
+
 ---
 
 # Tallahassee Tomato Pie

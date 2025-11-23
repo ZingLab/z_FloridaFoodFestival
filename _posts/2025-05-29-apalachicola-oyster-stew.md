@@ -8,6 +8,8 @@ event_highlights:
     description: "Fresh Apalachicola oysters in a rich, creamy broth."
   - title: "Coastal Comfort Food"
     description: "A North Florida winter favorite."
+description: "Fresh Apalachicola oysters in a rich, creamy broth."
+
 ---
 
 # Apalachicola Oyster Stew

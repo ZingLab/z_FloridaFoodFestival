@@ -8,6 +8,8 @@ event_highlights:
     description: "A medley of Florida oranges, grapefruit, and creamy avocado."
   - title: "Vibrant Summer Salad"
     description: "Perfect for picnics or light lunches."
+description: "Bright, refreshing Florida-style citrus salad with oranges, grapefruit, creamy avocado, red onion, mint, and a honey-lime dressing."
+keywords: "Florida citrus salad, citrus avocado salad, orange grapefruit salad, avocado salad, honey-lime dressing, summer salad, healthy recipe, picnic salad, vegetarian, light lunch"
 ---
 
 # Sunshine Citrus Salad with Avocado

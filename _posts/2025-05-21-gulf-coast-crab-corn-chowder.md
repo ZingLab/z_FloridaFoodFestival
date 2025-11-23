@@ -8,6 +8,8 @@ event_highlights:
     description: "Sweet crab and corn in a velvety chowder."
   - title: "Seafood Comfort"
     description: "A Florida favorite for cool summer nights."
+description: "Sweet crab and corn in a velvety chowder."
+
 ---
 
 # Gulf Coast Crab & Corn Chowder

@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Keys Conch Fritters"
 featured_image: "/assets/images/recipes/conch-fritters.jpg"
+description: "Crispy golden conch fritters from the Florida Keys, blending tender conch meat with peppers and island spices, served with tangy dipping sauce."
+keywords: "conch fritters, Florida Keys recipe, seafood appetizer, fried conch, island snack, Keys cuisine, conch meat, tropical recipe"
 event_highlights:
   - title: "Island Snack"
     description: "Crispy, golden fritters packed with tender conch and island spices."

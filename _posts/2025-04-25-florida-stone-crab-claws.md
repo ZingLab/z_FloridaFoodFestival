@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Stone Crab Claws with Mustard Sauce"
 featured_image: "/assets/images/recipes/stone-crab-claws.jpg"
+description: "Florida Stone Crab Claws with Mustard Sauce — Sweet, succulent claws harvested from Florida's pristine waters."
+keywords: "stone crab, Florida stone crab, Florida seafood, mustard sauce, crab claws, seafood recipe, sustainable seafood, Gulf Coast, appetizer, summer recipe, festival food"
 event_highlights:
   - title: "Sustainable Seafood"
     description: "Sweet, succulent claws harvested from Florida's pristine waters."

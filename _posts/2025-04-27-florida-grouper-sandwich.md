@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Grouper Sandwich"
 featured_image: "/assets/images/recipes/grouper-sandwich.jpg"
+description: "Crispy fried Florida grouper fillet on a soft bun with tangy slaw and tartar sauce — a Gulf Coast beach classic."
+keywords: "grouper sandwich, Florida grouper, seafood sandwich, Gulf Coast recipe, fried fish sandwich, grouper recipe, beach food, fish sandwich recipe, tartar sauce"
 event_highlights:
   - title: "Beachside Favorite"
     description: "Crispy fried grouper fillet on a soft bun with tangy slaw and tartar sauce."

@@ -8,6 +8,8 @@ event_highlights:
     description: "Classic roadside snack, soft and savory."
   - title: "Game Day Favorite"
     description: "A North Florida tradition for tailgates and picnics."
+description: "Classic roadside snack, soft and savory."
+
 ---
 
 # Gainesville Boiled Peanuts

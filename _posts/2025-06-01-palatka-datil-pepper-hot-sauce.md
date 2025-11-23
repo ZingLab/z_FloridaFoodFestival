@@ -8,6 +8,8 @@ event_highlights:
     description: "Homemade hot sauce with North Florida's famous datil peppers."
   - title: "Local Legend"
     description: "A fiery condiment from Palatka."
+description: "Homemade hot sauce with North Florida's famous datil peppers."
+
 ---
 
 # Palatka Datil Pepper Hot Sauce

@@ -8,6 +8,8 @@ event_highlights:
     description: "Flaky pastry filled with guava paste and cream cheese—a Miami favorite."
   - title: "Perfect with Coffee"
     description: "Enjoy with a cafecito for a true South Florida experience."
+description: "Flaky Cuban-style pastries filled with sweet guava paste and optional cream cheese—perfect for breakfast or a cafecito."
+keywords: "guava pastries, Pastelitos de Guayaba, Cuban pastry, Miami breakfast, guava paste, cream cheese pastries, puff pastry, Cuban bakery, Latin desserts, cafecito"
 ---
 
 # Florida Guava Pastries (Pastelitos de Guayaba)

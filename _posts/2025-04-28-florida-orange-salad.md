@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Citrus & Avocado Salad"
 featured_image: "/assets/images/recipes/orange-avocado-salad.jpg"
+description: "A refreshing salad featuring juicy Florida oranges, creamy avocado, crisp greens, and a zesty citrus vinaigrette."
+keywords: "Florida oranges, avocado salad, citrus salad, healthy recipes, fresh salads, summer recipes, Florida produce, easy salad, citrus vinaigrette"
 event_highlights:
   - title: "Fresh & Vibrant"
     description: "Juicy Florida oranges, creamy avocado, and crisp greens in a zesty citrus dressing."

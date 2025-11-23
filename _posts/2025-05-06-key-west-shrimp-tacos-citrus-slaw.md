@@ -8,6 +8,8 @@ event_highlights:
     description: "Juicy shrimp, tangy citrus slaw, and soft tortillas."
   - title: "Perfect for Summer"
     description: "A light, flavorful meal for warm evenings."
+description: "Light, zesty Key West–style shrimp tacos topped with a bright citrus cabbage slaw — fresh, tangy, and perfect for summer gatherings."
+keywords: "shrimp tacos, citrus slaw, Key West, seafood tacos, lime shrimp, summer recipes, easy tacos, Florida cuisine, grilled shrimp, taco recipe"
 ---
 
 # Key West Shrimp Tacos with Citrus Slaw

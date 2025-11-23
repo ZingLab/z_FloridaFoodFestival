@@ -8,6 +8,8 @@ event_highlights:
     description: "A traditional dish made with hearts of palm."
   - title: "Simple & Nutritious"
     description: "Quick stir-fry with fresh veggies and herbs."
+description: "A light, zesty Everglades-style stir-fry featuring hearts of palm (swamp cabbage) with bell pepper, onion, garlic, lemon, and fresh parsley."
+keywords: "swamp cabbage, hearts of palm, Everglades recipe, Florida food, stir-fry, quick healthy recipe, vegetarian, side dish"
 ---
 
 # Everglades Swamp Cabbage Stir-Fry

@@ -8,6 +8,8 @@ event_highlights:
     description: "Savory chicken and rice with North Florida roots."
   - title: "Family Tradition"
     description: "A comforting dish for gatherings and potlucks."
+description: "Savory chicken and rice with North Florida roots."
+
 ---
 
 # Lake City Chicken Pilau (Perloo)

@@ -8,6 +8,8 @@ event_highlights:
     description: "Juicy peaches, fresh mozzarella, and basil."
   - title: "Summer Twist on a Classic"
     description: "A Florida-inspired take on Caprese salad."
+description: "A Florida-inspired Caprese salad featuring juicy peaches, fresh mozzarella, and basil with a balsamic glaze"
+keywords: "peach caprese salad, Florida recipe, summer salad, fresh mozzarella, peach recipe, easy salad"
 ---
 
 # Peachy Florida Caprese Salad

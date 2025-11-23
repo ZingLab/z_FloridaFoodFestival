@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Classic Cuban Sandwich"
 featured_image: "/assets/images/recipes/cuban-sandwich.jpg"
+description: "Authentic Cuban sandwich, a pressed delicacy from Tampa featuring roast pork, ham, Swiss cheese, and pickles on crispy Cuban bread."
+keywords: "Cuban sandwich, Cubano recipe, Tampa food, pressed sandwich, roast pork, ham, Swiss cheese, Florida cuisine, Cuban bread, authentic recipe"
 event_highlights:
   - title: "Tampa's Iconic Lunch"
     description: "A pressed sandwich layered with roast pork, ham, Swiss cheese, pickles, and mustard."

@@ -8,6 +8,8 @@ event_highlights:
     description: "Charred corn with creamy, tangy toppings."
   - title: "Street Food Favorite"
     description: "A Cuban twist on classic elote."
+description: "Charred grilled corn topped with creamy mayo, cotija cheese, lime juice, and smoked paprika in this authentic Cuban-style elote recipe."
+keywords: "cuban elote, grilled corn, corn on the cob, cotija cheese, smoked paprika, street food, cuban recipe, summer cookout"
 ---
 
 # Cuban-Style Corn on the Cob (Elote Cubano)

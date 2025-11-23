@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Mexican Street Corn 2"
 featured_image: "/assets/images/events/mexican-street-corn.jpg"
+description: "Mexican street corn with charred kernels, creamy toppings, and authentic seasonings. Includes spicy and sweet variations."
+keywords: "mexican street corn, elote, esquites, street food, grilled corn, cotija cheese, summer recipes, spicy, sweet, festival food"
 event_highlights:
   - title: "Fast and refreshing"
     description: "Quick, easy, and bursting with flavor, this dish is the perfect way to beat the heat."

@@ -8,6 +8,8 @@ event_highlights:
     description: "Fried catfish fillets on a soft roll with tangy remoulade."
   - title: "Riverfront Favorite"
     description: "Inspired by North Florida's St. Johns River."
+description: "Fried catfish fillets on a soft roll with tangy remoulade."
+
 ---
 
 # St. Johns River Catfish Po' Boys

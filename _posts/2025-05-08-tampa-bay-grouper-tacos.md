@@ -8,6 +8,8 @@ event_highlights:
     description: "Crispy grouper, tangy slaw, and creamy sauce in every bite."
   - title: "Beachside Favorite"
     description: "A Florida classic, perfect for summer."
+description: "Crispy fried Gulf grouper in warm tortillas with zesty cabbage slaw and creamy lime-hot sauce — a fresh, beachside fish taco."
+keywords: "grouper tacos, fish tacos, Gulf grouper, Florida seafood, crispy fried fish, cabbage slaw, lime sauce, summer recipes"
 ---
 
 # Tampa Bay Grouper Tacos

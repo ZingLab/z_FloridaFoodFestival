@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Classic Key Lime Pie"
 featured_image: "/assets/images/recipes/key-lime-pie.jpg"
+description: "Classic Key lime pie — a tangy, creamy Florida Keys dessert with a crisp graham cracker crust. Includes quick-bake method and chilling instructions for a refreshing, festival-ready treat."
+keywords: "key lime pie, Florida dessert, recipe, graham cracker crust, citrus, summer dessert, festival food, tropical"
 event_highlights:
   - title: "Florida's Iconic Dessert"
     description: "A tangy, creamy pie with a crisp graham cracker crust, straight from the Florida Keys."

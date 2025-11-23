@@ -8,6 +8,8 @@ event_highlights:
     description: "Fresh shrimp salad in a soft roll, perfect for summer."
   - title: "Amelia Island Classic"
     description: "A North Florida beach favorite."
+description: "Fresh shrimp salad in a soft roll, perfect for summer."
+
 ---
 
 # Fernandina Beach Shrimp Salad Rolls

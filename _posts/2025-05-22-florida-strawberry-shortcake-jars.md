@@ -8,6 +8,8 @@ event_highlights:
     description: "Layers of cake, whipped cream, and juicy strawberries."
   - title: "Picnic Perfect"
     description: "A classic dessert in a mason jar."
+description: "Layers of cake, whipped cream, and juicy strawberries."
+
 ---
 
 # Florida Strawberry Shortcake Jars

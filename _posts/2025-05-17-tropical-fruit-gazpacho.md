@@ -8,6 +8,8 @@ event_highlights:
     description: "A sweet and savory soup with mango, pineapple, and cucumber."
   - title: "No Cooking Needed"
     description: "Blend and chill for a cool summer starter."
+description: "A sweet and savory soup with mango, pineapple, and cucumber."
+
 ---
 
 # Tropical Fruit Gazpacho

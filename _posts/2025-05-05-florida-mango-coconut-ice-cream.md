@@ -8,6 +8,8 @@ event_highlights:
     description: "Creamy homemade ice cream with ripe mango and coconut milk."
   - title: "No Churn Needed"
     description: "Easy to make—no ice cream maker required!"
+description: "Creamy, dairy-free mango coconut ice cream made with ripe Florida mangoes and full-fat coconut milk. No-churn, easy summer dessert."
+keywords: "Florida mango, mango coconut ice cream, dairy-free ice cream, no-churn ice cream, tropical dessert, coconut milk ice cream, homemade ice cream, summer dessert, mango recipe"
 ---
 
 # Florida Mango Coconut Ice Cream

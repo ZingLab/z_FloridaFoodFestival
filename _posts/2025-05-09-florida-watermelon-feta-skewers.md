@@ -8,6 +8,8 @@ event_highlights:
     description: "Juicy watermelon, creamy feta, and fresh mint on a stick."
   - title: "Easy Summer Appetizer"
     description: "Perfect for parties and picnics."
+description: "Refreshing watermelon, feta, and mint skewers drizzled with balsamic glaze — a sweet-and-savory summer appetizer."
+keywords: "watermelon, feta, skewers, summer appetizer, mint, balsamic glaze, party snack, picnic, easy recipe, vegetarian"
 ---
 
 # Florida Watermelon Feta Skewers

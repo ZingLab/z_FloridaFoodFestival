@@ -8,6 +8,8 @@ event_highlights:
     description: "Tender pork marinated in citrusy mojo sauce."
   - title: "Party Favorite"
     description: "Perfect for gatherings and game day."
+description: "Tender pork sliders marinated in citrusy Cuban mojo sauce, served on soft buns for a zesty Miami street food experience."
+keywords: "mojo pork sliders, Cuban recipe, Miami street food, citrus marinade, party appetizers, pork sandwiches, food festival"
 ---
 
 # Miami Mojo Pork Sliders

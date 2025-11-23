@@ -8,6 +8,8 @@ event_highlights:
     description: "Chicken marinated in orange, lime, and herbs."
   - title: "Grill Favorite"
     description: "Perfect for backyard barbecues."
+description: "Chicken marinated in orange, lime, and herbs. Perfect for backyard barbecues."
+
 ---
 
 # Citrus Marinated Grilled Chicken

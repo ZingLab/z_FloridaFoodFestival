@@ -8,6 +8,8 @@ event_highlights:
     description: "Creamy Florida avocado, juicy tomato, and zesty lime."
   - title: "Quick Breakfast"
     description: "A healthy start to your summer day."
+description: "Creamy Florida avocado, juicy tomato, and zesty lime."
+
 ---
 
 # Florida Avocado Toast with Tomato & Lime

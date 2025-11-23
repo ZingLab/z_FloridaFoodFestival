@@ -8,6 +8,8 @@ event_highlights:
     description: "Crispy, tender bites of alligator tail—uniquely Floridian!"
   - title: "Swamp Snack"
     description: "A fun appetizer for parties and game days."
+description: "Crispy, buttermilk-marinated fried alligator tail bites seasoned with Cajun spices and served with a zesty mayonnaise-hot sauce dip."
+keywords: "alligator bites,gator bites,Florida recipes,Everglades cuisine,Cajun fried alligator,seafood appetizer,party finger food,adventurous eating"
 ---
 
 # Florida Gator Bites

@@ -3,6 +3,8 @@ layout: post
 category: recipe
 title: "Florida Mango Salsa"
 featured_image: "/assets/images/recipes/mango-salsa.jpg"
+description: "Sweet, zesty Florida mango salsa with ripe mangoes, red bell pepper, red onion, jalapeño, cilantro, and lime — a bright, versatile topping or dip."
+keywords: "Florida mango salsa, mango salsa recipe, fresh mango salsa, tropical salsa, mango recipes, summer salsa, mango dip, salsa for fish, cilantro lime salsa"
 event_highlights:
   - title: "Tropical Freshness"
     description: "Sweet, juicy mangoes paired with zesty lime and a hint of spice."

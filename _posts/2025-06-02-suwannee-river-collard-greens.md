@@ -8,6 +8,8 @@ event_highlights:
     description: "Slow-simmered collards with smoky bacon."
   - title: "Soul Food Classic"
     description: "A North Florida comfort food staple."
+description: "Slow-simmered collards with smoky bacon."
+
 ---
 
 # Suwannee River Collard Greens

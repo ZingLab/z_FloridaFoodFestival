@@ -8,6 +8,8 @@ event_highlights:
     description: "All the flavor of pecan pie in easy-to-eat bars."
   - title: "Southern Dessert"
     description: "A North Florida holiday and picnic favorite."
+description: "All the flavor of pecan pie in easy-to-eat bars."
+
 ---
 
 # Madison County Pecan Pie Bars
