@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO -->
-    {% assign meta_title = post.title | page.title | default: site.title %}
-    {% assign meta_description = post.description | page.description | default: site.description %}
-    {% assign meta_keywords = post.keywords | page.keywords | default: site.keywords | default: "Florida, food festival, culinary, cuisine, local produce, chefs, seafood, citrus, Florida cuisine" %}
+    {% assign meta_title = default: page.title | site.title %}
+    {% assign meta_description = default: page.description | site.description %}
+    {% assign meta_keywords = default: page.keywords | site.keywords | default: "Florida, food festival, culinary, cuisine, local produce, chefs, seafood, citrus, Florida cuisine" %}
     {% assign meta_author = page.author | default: site.author %}
 
     {% comment %} Build absolute URL for the page/post {% endcomment %}
