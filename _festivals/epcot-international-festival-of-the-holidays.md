@@ -38,6 +38,7 @@ admission: park
 price: Included with EPCOT admission; food and drinks priced per item
 organizer: Walt Disney World Resort
 website: https://disneyworld.disney.go.com/events-tours/epcot/epcot-international-festival-of-the-holidays/
+email_source: Theme park event; no public festival email (use park media relations)
 featured_image: "/assets/images/recipes/pecan-pie-bars.jpg"
 image_alt: Illustrative Florida dish representing EPCOT International Festival of
   the Holidays

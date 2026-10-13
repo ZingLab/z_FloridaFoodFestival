@@ -9,7 +9,7 @@ keywords: Wausau Fun Day & Possum Festival, Wausau Fun Day & Possum Festival 202
   quirky festival, Florida community festival, Florida heritage festival, barbecue
   and southern plates, fried chicken and pilau
 short: A gloriously quirky Panhandle tradition honoring the humble possum.
-rank: 40
+rank: 47
 tier: 4
 tier_label: Hometown
 scale: Small-town crowd
@@ -32,7 +32,9 @@ months:
 timing: First Saturday in August
 admission: free
 price: Free admission; food priced per item
-organizer: Wausau community organizers
+organizer: Wausau Community Development Club
+email_source: No email found; Town of Wausau (850) 638-1781
+founded: 1970
 featured_image: "/assets/images/recipes/chicken-pilau.jpg"
 image_alt: Illustrative Florida dish representing Wausau Fun Day & Possum Festival
 foods:

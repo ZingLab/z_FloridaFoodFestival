@@ -10,7 +10,7 @@ keywords: Fellsmere Frog Leg Festival, Fellsmere Frog Leg Festival 2027, Fellsme
   legs, gator tail
 short: Thousands of pounds of fried frog legs, gator tail and catfish at a beloved
   Treasure Coast small-town festival.
-rank: 41
+rank: 48
 tier: 4
 tier_label: Hometown
 scale: Small town, big appetite
@@ -21,7 +21,7 @@ categories:
 region: Treasure & Space Coast
 city: Fellsmere
 county: Indian River
-venue: Downtown Fellsmere
+venue: Fellsmere Old School Complex
 postal_code: '32948'
 latitude: 27.7678
 longitude: -80.6012
@@ -34,6 +34,9 @@ timing: Mid-January
 admission: ticketed
 price: Low-cost gate admission
 organizer: Fellsmere community volunteers
+website: https://www.froglegfestival.com/
+email: froglegfestival@gmail.com
+email_source: Festival press listing, Jan 2026
 featured_image: "/assets/images/recipes/gator-bites.jpg"
 image_alt: Illustrative Florida dish representing Fellsmere Frog Leg Festival
 foods:
@@ -57,7 +60,7 @@ faq:
   a: 'Timing: Mid-January. Our current estimate for the next edition is January 14,
     2027 to January 17, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the Fellsmere Frog Leg Festival held?
-  a: Downtown Fellsmere in Fellsmere, FL (Indian River County, Treasure
+  a: Fellsmere Old School Complex in Fellsmere, FL (Indian River County, Treasure
     & Space Coast).
 - q: Is the Fellsmere Frog Leg Festival free?
   a: No, it is a ticketed event. Low-cost gate admission.

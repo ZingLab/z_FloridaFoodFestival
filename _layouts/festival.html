@@ -2,6 +2,10 @@
 layout: default
 ---
 {% assign f = page %}
+{% capture claim_mailto %}{% include festival-mailto.html festival=f action="claim" %}{% endcapture %}
+{% capture sponsor_mailto %}{% include festival-mailto.html festival=f action="sponsor" %}{% endcapture %}
+{% assign claim_mailto = claim_mailto | strip %}
+{% assign sponsor_mailto = sponsor_mailto | strip %}
 {% assign has_sponsor = false %}{% if f.sponsor and f.sponsor.name %}{% assign has_sponsor = true %}{% endif %}
 {% if f.website %}
   {% if f.website contains "?" %}{% assign utm_join = "&" %}{% else %}{% assign utm_join = "?" %}{% endif %}
@@ -118,8 +122,9 @@ layout: default
           <dt>Organizer</dt><dd>{{ f.organizer }}</dd>
           <dt>Type</dt>
           <dd class="festival-cats">{% for c in f.categories %}<a href="/festivals/?type={{ c | url_encode }}">{{ c }}</a>{% endfor %}</dd>
+          {% if f.email and f.email_personal != true %}<dt>Organizer email</dt><dd><a href="mailto:{{ f.email }}">{{ f.email }}</a></dd>{% endif %}
           <dt>Official site</dt>
-          <dd>{% if official_url %}<a href="{{ official_url }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}Not listed yet. <a href="/claim/?festival={{ f.slug }}">Organizers, add it</a>{% endif %}</dd>
+          <dd>{% if official_url %}<a href="{{ official_url }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}Not listed yet. <a href="{{ claim_mailto }}">Organizers, add it</a>{% endif %}</dd>
         </dl>
       </div>
 
@@ -127,7 +132,7 @@ layout: default
       <div class="festival-box festival-box--claim">
         <h3>Is this your festival?</h3>
         <p>Claim this page for free to update dates, add tickets and photos, and get a verified badge.</p>
-        <a class="btn btn-small" href="/claim/?festival={{ f.slug }}">Claim this page</a>
+        <a class="btn btn-small" href="{{ claim_mailto }}">Claim this page</a>
       </div>
       {% endunless %}
 
@@ -135,7 +140,8 @@ layout: default
       <div class="festival-box festival-box--sponsor">
         <h3>Sponsor this page</h3>
         <p>Put your restaurant, hotel, brewery or brand in front of people planning a trip to the {{ f.title }}.</p>
-        <a class="btn btn-small btn-dark" href="/advertise/?festival={{ f.slug }}&type=sponsor#inquiry">Become the presenting sponsor</a>
+        <a class="btn btn-small btn-dark" href="{{ sponsor_mailto }}">Become the presenting sponsor</a>
+        <p class="festival-box-more"><a href="/advertise/#festival-sponsorship">What's included</a></p>
       </div>
       {% endunless %}
 
@@ -164,4 +170,4 @@ layout: default
   </div>
 </article>
 
-{% include organizer-cta.html festival=f %}
+{% include organizer-cta.html festival=f claim_href=claim_mailto sponsor_href=sponsor_mailto %}

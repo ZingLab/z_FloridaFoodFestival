@@ -32,6 +32,8 @@ timing: Last Saturday in January
 admission: free
 price: Free
 organizer: Greater Dade City Chamber of Commerce
+website: https://www.kumquatfestival.org/
+email_source: No email found; Greater Dade City Chamber, (352) 567-3769
 founded: 1998
 featured_image: "/assets/images/recipes/orange-avocado-salad.jpg"
 image_alt: Illustrative Florida dish representing Kumquat Festival

@@ -39,6 +39,7 @@ admission: park
 price: Included with Universal Studios Florida admission; food priced per item
 organizer: Universal Orlando Resort
 website: https://www.universalorlando.com/web/en/us/things-to-do/events/mardi-gras
+email_source: Theme park event; no public festival email (use park media relations)
 featured_image: "/assets/images/recipes/catfish-po-boy.jpg"
 image_alt: 'Illustrative Florida dish representing Universal Orlando Mardi Gras: International
   Flavors of Carnaval'

@@ -2,8 +2,8 @@
 title: Panacea Blue Crab Festival
 seo_title: 'Panacea Blue Crab Festival 2027: Dates, Food & Tips'
 slug: panacea-blue-crab-festival
-description: Panacea Blue Crab Festival in Panacea, FL (First Saturday in May). Blue
-  crab, mullet and Forgotten Coast charm on Wakulla County's waterfront.
+description: Panacea Blue Crab Festival in Panacea, FL (Late September). Blue crab,
+  mullet and Forgotten Coast charm on Wakulla County's waterfront.
 keywords: Panacea Blue Crab Festival, Panacea Blue Crab Festival 2027, Panacea food
   festival, Panhandle food festivals, Florida food festivals, Florida seafood festival,
   Florida community festival, steamed and fried blue crab, crab cakes and deviled
@@ -23,15 +23,16 @@ venue: Woolley Park
 postal_code: '32346'
 latitude: 30.0335
 longitude: -84.388
-start_date: '2027-05-01'
-end_date: '2027-05-01'
+start_date: '2027-09-25'
+end_date: '2027-09-25'
 date_status: estimated
 months:
-- May
-timing: First Saturday in May
+- September
+timing: Late September
 admission: free
 price: Free admission; food priced per item
 organizer: Panacea community organizers
+email_source: No official site or email found
 featured_image: "/assets/images/recipes/crab-corn-chowder.jpg"
 image_alt: Illustrative Florida dish representing Panacea Blue Crab Festival
 foods:
@@ -51,8 +52,8 @@ tips:
 - Bring cash.
 faq:
 - q: When is the 2027 Panacea Blue Crab Festival?
-  a: 'Timing: First Saturday in May. Our current estimate for the next edition is
-    May 1, 2027. Confirm the dates with the organizer before you travel.'
+  a: 'Timing: Late September. Our current estimate for the next edition is September
+    25, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the Panacea Blue Crab Festival held?
   a: Woolley Park in Panacea, FL (Wakulla County, Panhandle).
 - q: Is the Panacea Blue Crab Festival free?

@@ -37,6 +37,10 @@ admission: free
 price: Free admission; food and drinks priced per item
 organizer: Isle of Eight Flags Shrimp Festival Committee
 website: https://www.shrimpfestival.com/
+email: 4info@shrimpfestival.com
+sponsorship_email: sponsorship@shrimpfestival.com
+contact_url: https://www.shrimpfestival.com/contact
+email_source: shrimpfestival.com contact page
 founded: 1963
 featured_image: "/assets/images/recipes/shrimp-salad-rolls.jpg"
 image_alt: Illustrative Florida dish representing Isle of Eight Flags Shrimp Festival

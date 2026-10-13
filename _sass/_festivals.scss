@@ -458,3 +458,30 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
   .festival-short { font-size: 1.05rem; }
   .inquiry-form { padding: 1.25rem; }
 }
+
+.festival-box-more { font-size: .8rem; margin: .6rem 0 0; }
+
+/* ---------- Outreach (internal) ---------- */
+.outreach { padding: 2.5rem 0 4rem; }
+.outreach h1 { font-size: 2rem; }
+.outreach-note { color: var(--fest-muted); max-width: 820px; }
+.outreach-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1rem 0 1.5rem; }
+.outreach-actions #outreach-status { font-size: .9rem; color: var(--fest-teal-dark); }
+.outreach-table-wrap { overflow-x: auto; border: 1px solid var(--border-color); border-radius: 10px; }
+.outreach-table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: .88rem; }
+.outreach-table th {
+  position: sticky;
+  top: 0;
+  background: var(--section-bg);
+  text-align: left;
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--fest-muted);
+  padding: .65rem .75rem;
+}
+.outreach-table td { padding: .65rem .75rem; border-top: 1px solid var(--border-color); vertical-align: top; }
+.outreach-table small { color: var(--fest-muted); }
+.outreach-table a, .outreach-table a:visited { color: var(--primary-color); word-break: break-all; }
+.outreach-flag { font-size: .68rem; font-weight: 700; text-transform: uppercase; background: #fff3ec; color: #b4471a; padding: .05rem .35rem; border-radius: 4px; }
+.outreach-missing { color: #9aa5ae; }

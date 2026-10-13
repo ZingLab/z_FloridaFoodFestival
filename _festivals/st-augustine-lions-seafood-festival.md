@@ -10,7 +10,7 @@ keywords: St. Augustine Lions Seafood Festival, St. Augustine Lions Seafood Fest
   festival, fried shrimp and fish baskets, datil pepper sauces and specialties
 short: Seafood, crafts and live music benefiting Lions Club charities in the nation's
   oldest city.
-rank: 23
+rank: 24
 tier: 2
 tier_label: Major
 scale: Thousands of visitors over a weekend
@@ -25,8 +25,8 @@ venue: Francis Field
 postal_code: '32084'
 latitude: 29.8946
 longitude: -81.3145
-start_date: '2027-03-12'
-end_date: '2027-03-14'
+start_date: '2027-03-20'
+end_date: '2027-03-21'
 date_status: estimated
 months:
 - March
@@ -34,6 +34,9 @@ timing: March
 admission: ticketed
 price: Low-cost gate admission
 organizer: St. Augustine Lions Club
+website: https://www.lionsfestival.com/
+email: admin@lionsfestival.com
+email_source: Third-party listing (2024); not shown on lionsfestival.com. Verify.
 featured_image: "/assets/images/recipes/datil-pepper-wings.jpg"
 image_alt: Illustrative Florida dish representing St. Augustine Lions Seafood Festival
 foods:
@@ -54,8 +57,8 @@ tips:
 - Spring weekends are busy; arrive early.
 faq:
 - q: When is the 2027 St. Augustine Lions Seafood Festival?
-  a: 'Timing: March. Our current estimate for the next edition is March 12, 2027 to
-    March 14, 2027. Confirm the dates with the organizer before you travel.'
+  a: 'Timing: March. Our current estimate for the next edition is March 20, 2027 to
+    March 21, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the St. Augustine Lions Seafood Festival held?
   a: Francis Field in St. Augustine, FL (St. Johns County, Northeast Florida).
 - q: Is the St. Augustine Lions Seafood Festival free?

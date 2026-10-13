@@ -35,6 +35,8 @@ admission: free
 price: Free to attend; food and drinks sold by vendors
 organizer: Kiwanis Club of Little Havana
 website: https://www.carnavalmiami.com/
+email: info@carnavalmiami.com
+email_source: carnavalmiami.com contact page
 featured_image: "/assets/images/recipes/cuban-sandwich.jpg"
 image_alt: Illustrative Florida dish representing Calle Ocho Music Festival
 foods:

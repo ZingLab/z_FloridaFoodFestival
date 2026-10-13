@@ -26,7 +26,7 @@ latitude: 26.7056
 longitude: -80.0364
 start_date: '2026-12-10'
 end_date: '2026-12-13'
-date_status: estimated
+date_status: confirmed
 months:
 - December
 timing: Early-to-mid December
@@ -34,6 +34,8 @@ admission: ticketed
 price: Individually ticketed events
 organizer: Palm Beach Food & Wine Festival
 website: https://www.pbfoodwinefest.com/
+contact_url: https://www.pbfoodwinefest.com/contact
+email_source: No email published; 1-800-210-0689 and contact page
 founded: 2007
 featured_image: "/assets/images/recipes/florida-avocado-toast.jpg"
 image_alt: Illustrative Florida dish representing Palm Beach Food & Wine Festival
@@ -54,9 +56,8 @@ tips:
 - Book dinners as soon as tickets go on sale.
 faq:
 - q: When is the 2026 Palm Beach Food & Wine Festival?
-  a: 'Timing: Early-to-mid December. Our current estimate for the next edition is
-    December 10, 2026 to December 13, 2026. Confirm the dates with the organizer before
-    you travel.'
+  a: 'The next edition is scheduled for December 10, 2026 to December 13, 2026, per
+    the organizer. Typical timing: Early-to-mid December.'
 - q: Where is the Palm Beach Food & Wine Festival held?
   a: Multiple venues across the Palm Beaches in Palm Beach, FL (Palm Beach County,
     South Florida).

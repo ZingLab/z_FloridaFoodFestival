@@ -24,9 +24,9 @@ venue: Multiple venues across Miami Beach and Miami
 postal_code: '33139'
 latitude: 25.7907
 longitude: -80.13
-start_date: '2027-02-18'
-end_date: '2027-02-21'
-date_status: estimated
+start_date: '2027-02-25'
+end_date: '2027-02-28'
+date_status: confirmed
 months:
 - February
 timing: Late February
@@ -34,6 +34,8 @@ admission: ticketed
 price: Individually ticketed events; prices vary widely
 organizer: Southern Glazer's Wine & Spirits and Florida International University
 website: https://sobewff.org/
+email: info@sobewff.org
+email_source: corporate.sobewff.org contact page
 founded: 2002
 featured_image: "/assets/images/recipes/stone-crab-claws.jpg"
 image_alt: Illustrative Florida dish representing South Beach Wine & Food Festival
@@ -56,9 +58,8 @@ tips:
 - Use rideshare; parking near the beach is limited and expensive.
 faq:
 - q: When is the 2027 South Beach Wine & Food Festival?
-  a: 'Timing: Late February. Our current estimate for the next edition is February
-    18, 2027 to February 21, 2027. Confirm the dates with the organizer before you
-    travel.'
+  a: 'The next edition is scheduled for February 25, 2027 to February 28, 2027, per
+    the organizer. Typical timing: Late February.'
 - q: Where is the South Beach Wine & Food Festival held?
   a: Multiple venues across Miami Beach and Miami in Miami Beach, FL (Miami-Dade County,
     South Florida).

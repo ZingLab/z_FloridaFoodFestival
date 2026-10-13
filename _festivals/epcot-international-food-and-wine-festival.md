@@ -39,6 +39,7 @@ admission: park
 price: Included with EPCOT admission; food and drinks priced per item
 organizer: Walt Disney World Resort
 website: https://disneyworld.disney.go.com/events-tours/epcot/epcot-international-food-and-wine-festival/
+email_source: Theme park event; no public festival email (use park media relations)
 founded: 1995
 featured_image: "/assets/images/recipes/shrimp-tacos.jpg"
 image_alt: Illustrative Florida dish representing EPCOT International Food & Wine

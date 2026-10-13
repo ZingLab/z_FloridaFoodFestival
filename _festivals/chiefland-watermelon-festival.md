@@ -2,8 +2,8 @@
 title: Chiefland Watermelon Festival
 seo_title: 'Chiefland Watermelon Festival 2027: Dates, Food & Tips'
 slug: chiefland-watermelon-festival
-description: Chiefland Watermelon Festival in Chiefland, FL (Early June). Small-town
-  summer fun with free watermelon, seed-spitting and a watermelon queen.
+description: Chiefland Watermelon Festival in Chiefland, FL (First Saturday in June).
+  Small-town summer fun with free watermelon, seed-spitting and a watermelon queen.
 keywords: Chiefland Watermelon Festival, Chiefland Watermelon Festival 2027, Chiefland
   food festival, North Central Florida food festivals, Florida food festivals, Florida
   agricultural festival, Florida community festival, free watermelon slices, barbecue
@@ -29,10 +29,12 @@ end_date: '2027-06-05'
 date_status: estimated
 months:
 - June
-timing: Early June
+timing: First Saturday in June
 admission: free
 price: Free
-organizer: Greater Chiefland Area Chamber of Commerce
+organizer: Chiefland Woman's Club
+contact_url: https://www.chieflandwomansclub.org/
+email_source: No email found; Chiefland Woman's Club
 featured_image: "/assets/images/recipes/watermelon-feta-skewers.jpg"
 image_alt: Illustrative Florida dish representing Chiefland Watermelon Festival
 foods:
@@ -52,8 +54,8 @@ tips:
 - Bring sunscreen; it's early summer.
 faq:
 - q: When is the 2027 Chiefland Watermelon Festival?
-  a: 'Timing: Early June. Our current estimate for the next edition is June 5, 2027.
-    Confirm the dates with the organizer before you travel.'
+  a: 'Timing: First Saturday in June. Our current estimate for the next edition is
+    June 5, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the Chiefland Watermelon Festival held?
   a: Chiefland City Park in Chiefland, FL (Levy County, North Central Florida).
 - q: Is the Chiefland Watermelon Festival free?

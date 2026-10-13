@@ -25,7 +25,7 @@ latitude: 29.7255
 longitude: -84.9837
 start_date: '2026-11-06'
 end_date: '2026-11-07'
-date_status: estimated
+date_status: confirmed
 months:
 - November
 timing: First weekend in November
@@ -33,6 +33,8 @@ admission: ticketed
 price: Low-cost gate admission
 organizer: Florida Seafood Festival, Inc.
 website: https://www.floridaseafoodfestival.com/
+email: info@floridaseafoodfestival.com
+email_source: floridaseafoodfestival.com
 founded: 1963
 featured_image: "/assets/images/recipes/oyster-stew.jpg"
 image_alt: Illustrative Florida dish representing Florida Seafood Festival
@@ -54,9 +56,8 @@ tips:
 - Explore the historic downtown shops between meals.
 faq:
 - q: When is the 2026 Florida Seafood Festival?
-  a: 'Timing: First weekend in November. Our current estimate for the next edition
-    is November 6, 2026 to November 7, 2026. Confirm the dates with the organizer
-    before you travel.'
+  a: 'The next edition is scheduled for November 6, 2026 to November 7, 2026, per
+    the organizer. Typical timing: First weekend in November.'
 - q: Where is the Florida Seafood Festival held?
   a: Battery Park in Apalachicola, FL (Franklin County, Panhandle).
 - q: Is the Florida Seafood Festival free?

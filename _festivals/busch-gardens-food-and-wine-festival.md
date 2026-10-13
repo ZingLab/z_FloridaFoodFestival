@@ -38,6 +38,7 @@ admission: park
 price: Included with park admission; sampler lanyards sold separately
 organizer: Busch Gardens Tampa Bay
 website: https://buschgardens.com/tampa/events/food-and-wine-festival/
+email_source: Theme park event; no public festival email (use park media relations)
 featured_image: "/assets/images/recipes/mango-salsa.jpg"
 image_alt: Illustrative Florida dish representing Busch Gardens Tampa Bay Food & Wine
   Festival

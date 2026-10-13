@@ -19,19 +19,22 @@ categories:
 region: Northeast Florida
 city: Hastings
 county: St. Johns
-venue: Hastings
+venue: Downtown Hastings (North Main Street)
+street_address: 301 N Main St
 postal_code: '32145'
 latitude: 29.718
 longitude: -81.5076
 start_date: '2027-04-24'
-end_date: '2027-04-24'
+end_date: '2027-04-25'
 date_status: estimated
 months:
 - April
 timing: April
 admission: free
 price: Free admission; food priced per item
-organizer: Hastings community organizers
+organizer: Hastings Main Street
+email_source: No email found; Hastings Main Street, (904) 540-0402
+founded: 2024
 featured_image: "/assets/images/recipes/collard-greens.jpg"
 image_alt: Illustrative Florida dish representing Hastings Cabbage, Potato & Bacon
   Festival
@@ -52,10 +55,11 @@ tips:
 - Bring cash.
 faq:
 - q: When is the 2027 Hastings Cabbage, Potato & Bacon Festival?
-  a: 'Timing: April. Our current estimate for the next edition is April 24, 2027.
-    Confirm the dates with the organizer before you travel.'
+  a: 'Timing: April. Our current estimate for the next edition is April 24, 2027 to
+    April 25, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the Hastings Cabbage, Potato & Bacon Festival held?
-  a: Hastings in Hastings, FL (St. Johns County, Northeast Florida).
+  a: Downtown Hastings (North Main Street) in Hastings, FL (St. Johns County, Northeast
+    Florida).
 - q: Is the Hastings Cabbage, Potato & Bacon Festival free?
   a: Yes, general admission is free. Free admission; food priced per item.
 - q: What food is served at the Hastings Cabbage, Potato & Bacon Festival?
@@ -65,6 +69,6 @@ claimed: false
 sponsor:
 ---
 
-Hastings, in rural St. Johns County, has deep farming roots in potatoes and cabbage. Its festival celebrates that heritage with hearty farm dishes and, of course, bacon.
+Hastings, in rural St. Johns County, built its identity on potato and cabbage farming. Hastings Main Street launched the Cabbage, Potato & Bacon Festival in 2024 to celebrate that heritage along North Main Street.
 
-It's an easy side trip from St. Augustine.
+General admission is free; tastings and special events are ticketed. It's an easy side trip from St. Augustine.

@@ -1,0 +1,35 @@
+{%- comment -%}
+  Builds a mailto: URL for claiming or sponsoring a festival page.
+  Params: festival (page/document), action ("claim" | "sponsor")
+  Spaces are encoded as %20 (url_encode emits "+", which mail apps show literally).
+{%- endcomment -%}
+{%- assign fm = include.festival -%}
+{%- assign fm_url = site.url | append: fm.url -%}
+{%- if include.action == "sponsor" -%}
+  {%- assign fm_subject = site.contact.sponsor_subject_prefix | append: fm.title -%}
+  {%- capture fm_body -%}Hi Florida Food Festival team,
+
+I'm interested in sponsoring the {{ fm.title }} page:
+{{ fm_url }}
+
+Name:
+Company or brand:
+Website:
+Timing and budget:
+
+Thanks!{%- endcapture -%}
+{%- else -%}
+  {%- assign fm_subject = site.contact.claim_subject_prefix | append: fm.title -%}
+  {%- capture fm_body -%}Hi Florida Food Festival team,
+
+I'd like to claim the {{ fm.title }} page:
+{{ fm_url }}
+
+Name:
+Role with the festival:
+Official email or website we can use to verify you:
+Updates to make (dates, tickets, photos, links):
+
+Thanks!{%- endcapture -%}
+{%- endif -%}
+mailto:{{ site.contact.listings_email }}?subject={{ fm_subject | url_encode | replace: "+", "%20" }}&amp;body={{ fm_body | url_encode | replace: "+", "%20" }}

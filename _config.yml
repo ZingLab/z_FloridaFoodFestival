@@ -22,6 +22,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-redirect-from
 
 # Pagination settings
 paginate: 9
@@ -94,6 +95,11 @@ exclude:
 contact:
   inquiry_email: hi@zinglab.com
   form_endpoint: ""
+  # Claim/Sponsor links on festival pages open an email to this address.
+  # Subjects are built per festival as "<prefix><festival title>".
+  listings_email: florida@zinglab.com
+  claim_subject_prefix: "Claim: "
+  sponsor_subject_prefix: "Sponsor: "
 
 # Google Analytics
 google_analytics: G-DW82LSZY3F

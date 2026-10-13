@@ -62,6 +62,11 @@ Key front matter fields:
 - `months`, `region`, `categories`, `admission` (`free` | `ticketed` | `park`): power the filters
 - `claimed: true` shows the "Verified by organizer" badge and hides the claim box
 - `sponsor: { name, url, message }` adds a labeled "Presented by" bar with `rel="sponsored"` links
+- `email`, `sponsorship_email`, `contact_url`, `email_source`: organizer contacts. The email shows on the festival page unless `email_personal: true` (a named person's address), which keeps it on the outreach list only.
+
+The "Claim this page" and "Sponsor this page" links on every festival page are generated mailto links (`_includes/festival-mailto.html`) to `contact.listings_email`, with subjects built from `claim_subject_prefix` / `sponsor_subject_prefix` plus the festival title.
+
+`/outreach/` is an internal, noindexed list of every festival's email, website and page link, with copy-all-emails and CSV export. It is not linked anywhere and is excluded from the sitemap, but anyone with the URL can open it.
 
 Sponsor, claim, add and correction requests go through `_includes/inquiry-form.html`. Set `contact.form_endpoint` in `_config.yml` to a form backend (e.g. Formspree) to collect submissions; when it's blank, the form opens a prefilled email to `contact.inquiry_email`.
 

@@ -40,6 +40,7 @@ admission: park
 price: Included with SeaWorld admission; sampler lanyards sold separately
 organizer: SeaWorld Orlando
 website: https://seaworld.com/orlando/events/seven-seas-food-festival/
+email_source: Theme park event; no public festival email (use park media relations)
 featured_image: "/assets/images/recipes/conch-fritters.jpg"
 image_alt: Illustrative Florida dish representing SeaWorld Orlando Seven Seas Food
   Festival

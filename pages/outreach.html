@@ -1,0 +1,91 @@
+---
+layout: default
+title: Festival Outreach List
+permalink: /outreach/
+description: "Internal list of festival organizer contacts."
+robots: "noindex, nofollow, noarchive"
+sitemap: false
+---
+{% assign festivals = site.festivals | sort: "rank" %}
+{% assign with_email = festivals | where_exp: "f", "f.email" %}
+
+<section class="outreach">
+  <div class="container">
+    <h1>Festival outreach list</h1>
+    <p class="outreach-note">Internal page. Not linked from the site and hidden from search engines. {{ festivals.size }} festivals, {{ with_email.size }} with an email on file. Rows marked <span class="outreach-flag">personal</span> are a named person's address and are not shown on the public festival page; addresses marked <em>Verify</em> came from older or third-party listings.</p>
+
+    <div class="outreach-actions">
+      <button type="button" class="btn btn-small" id="copy-emails">Copy all emails</button>
+      <button type="button" class="btn btn-small btn-dark" id="download-csv">Download CSV</button>
+      <span id="outreach-status" role="status"></span>
+    </div>
+
+    <div class="outreach-table-wrap">
+      <table class="outreach-table" id="outreach-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Festival</th>
+            <th>Region</th>
+            <th>Next dates</th>
+            <th>Email</th>
+            <th>Website</th>
+            <th>Our page</th>
+            <th>Contact notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for f in festivals %}
+          <tr data-email="{{ f.email }}">
+            <td>{{ f.rank }}</td>
+            <td><strong>{{ f.title }}</strong><br><small>{{ f.tier_label }} · {{ f.city }}, FL{% if f.claimed %} · ✓ claimed{% endif %}</small></td>
+            <td>{{ f.region }}</td>
+            <td>{% include festival-dates.html festival=f %}<br><small>{{ f.date_status }}</small></td>
+            <td>
+              {% if f.email %}<a href="mailto:{{ f.email }}">{{ f.email }}</a>{% if f.email_personal %} <span class="outreach-flag">personal</span>{% endif %}{% else %}<span class="outreach-missing">none found</span>{% endif %}
+              {% if f.sponsorship_email %}<br><small>Sponsorship: <a href="mailto:{{ f.sponsorship_email }}">{{ f.sponsorship_email }}</a></small>{% endif %}
+            </td>
+            <td>
+              {% if f.website %}<a href="{{ f.website }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}<span class="outreach-missing">none</span>{% endif %}
+              {% if f.contact_url and f.contact_url != f.website %}<br><small><a href="{{ f.contact_url }}" target="_blank" rel="noopener">contact page</a></small>{% endif %}
+            </td>
+            <td><a href="{{ f.url }}">{{ site.url | remove: "https://" }}{{ f.url }}</a></td>
+            <td><small>{{ f.email_source }}</small></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const rows = Array.from(document.querySelectorAll('#outreach-table tbody tr'));
+  const status = document.getElementById('outreach-status');
+
+  document.getElementById('copy-emails').addEventListener('click', function() {
+    const emails = rows.map(r => r.dataset.email).filter(Boolean);
+    navigator.clipboard.writeText(emails.join(', ')).then(
+      () => { status.textContent = 'Copied ' + emails.length + ' emails.'; },
+      () => { status.textContent = 'Copy failed. Select the emails from the table instead.'; }
+    );
+  });
+
+  // Build the CSV from the festival data embedded at build time
+  const csvRows = [
+    ['Rank', 'Festival', 'Tier', 'City', 'Region', 'Start', 'End', 'Date status', 'Email', 'Personal email', 'Sponsorship email', 'Website', 'Contact page', 'Our page', 'Contact notes'],
+    {% for f in festivals %}[{{ f.rank | jsonify }}, {{ f.title | jsonify }}, {{ f.tier_label | jsonify }}, {{ f.city | jsonify }}, {{ f.region | jsonify }}, {{ f.start_date | jsonify }}, {{ f.end_date | jsonify }}, {{ f.date_status | jsonify }}, {{ f.email | default: "" | jsonify }}, {% if f.email_personal %}"yes"{% else %}""{% endif %}, {{ f.sponsorship_email | default: "" | jsonify }}, {{ f.website | default: "" | jsonify }}, {{ f.contact_url | default: "" | jsonify }}, {{ site.url | append: f.url | jsonify }}, {{ f.email_source | default: "" | jsonify }}]{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  document.getElementById('download-csv').addEventListener('click', function() {
+    const csv = csvRows.map(row => row.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(',')).join('\n');
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+    link.download = 'festival-outreach.csv';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
+});
+</script>

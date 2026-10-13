@@ -2,14 +2,14 @@
 title: Pensacola Crawfish Festival
 seo_title: 'Pensacola Crawfish Festival 2027: Dates, Food & Tips'
 slug: pensacola-crawfish-festival
-description: Pensacola Crawfish Festival in Pensacola, FL (Late April / early May).
-  Tons of boiled crawfish, Cajun food and live music on Pensacola's waterfront.
+description: Pensacola Crawfish Festival in Pensacola, FL (Late April). Tons of boiled
+  crawfish, Cajun food and live music on Pensacola's waterfront.
 keywords: Pensacola Crawfish Festival, Pensacola Crawfish Festival 2027, Pensacola
   food festival, Panhandle food festivals, Florida food festivals, Florida seafood
   festival, Florida music festival, boiled crawfish by the pound, crawfish étouffée
   and jambalaya
 short: Tons of boiled crawfish, Cajun food and live music on Pensacola's waterfront.
-rank: 27
+rank: 28
 tier: 2
 tier_label: Major
 scale: Thousands of visitors over a weekend
@@ -19,20 +19,22 @@ categories:
 region: Panhandle
 city: Pensacola
 county: Escambia
-venue: Downtown Pensacola
+venue: Seville Square & Fountain Park
 postal_code: '32502'
 latitude: 30.4213
 longitude: -87.2169
-start_date: '2027-04-30'
-end_date: '2027-05-02'
+start_date: '2027-04-23'
+end_date: '2027-04-25'
 date_status: estimated
 months:
 - April
-- May
-timing: Late April / early May
+timing: Late April
 admission: ticketed
 price: Gate admission
-organizer: Pensacola Crawfish Festival
+organizer: Fiesta Pensacola
+email: pcolaevents@gmail.com
+email_personal: true
+email_source: 2025 Visit Pensacola listing (vendor contact, Pcola Events)
 featured_image: "/assets/images/recipes/catfish-po-boy.jpg"
 image_alt: Illustrative Florida dish representing Pensacola Crawfish Festival
 foods:
@@ -52,11 +54,10 @@ tips:
 - Check gate prices and hours online.
 faq:
 - q: When is the 2027 Pensacola Crawfish Festival?
-  a: 'Timing: Late April / early May. Our current estimate for the next edition is
-    April 30, 2027 to May 2, 2027. Confirm the dates with the organizer before you
-    travel.'
+  a: 'Timing: Late April. Our current estimate for the next edition is April 23, 2027
+    to April 25, 2027. Confirm the dates with the organizer before you travel.'
 - q: Where is the Pensacola Crawfish Festival held?
-  a: Downtown Pensacola in Pensacola, FL (Escambia County, Panhandle).
+  a: Seville Square & Fountain Park in Pensacola, FL (Escambia County, Panhandle).
 - q: Is the Pensacola Crawfish Festival free?
   a: No, it is a ticketed event. Gate admission.
 - q: What food is served at the Pensacola Crawfish Festival?

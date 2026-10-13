@@ -34,6 +34,7 @@ timing: Last full weekend in February
 admission: ticketed
 price: Low-cost gate admission
 organizer: Swamp Cabbage Festival
+email_source: No official site or email found
 founded: 1966
 featured_image: "/assets/images/recipes/swamp-cabbage-stirfry.jpg"
 image_alt: Illustrative Florida dish representing Swamp Cabbage Festival

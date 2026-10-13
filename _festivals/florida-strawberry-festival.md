@@ -2,8 +2,8 @@
 title: Florida Strawberry Festival
 seo_title: 'Florida Strawberry Festival 2027: Dates, Food & Tips'
 slug: florida-strawberry-festival
-description: Florida Strawberry Festival in Plant City, FL (Late February into early
-  March (11 days)). Plant City's 11-day salute to the winter strawberry harvest,…
+description: Florida Strawberry Festival in Plant City, FL (Early-to-mid March (11
+  days)). Plant City's 11-day salute to the winter strawberry harvest, with shortcake,…
 keywords: Florida Strawberry Festival, Florida Strawberry Festival 2027, Plant City
   food festival, Tampa Bay food festivals, Florida food festivals, Florida agricultural
   festival, Florida fair festival, Florida music festival, strawberry shortcake, fresh
@@ -26,17 +26,18 @@ street_address: 303 N Lemon St
 postal_code: '33563'
 latitude: 28.0189
 longitude: -82.1137
-start_date: '2027-02-25'
-end_date: '2027-03-07'
-date_status: estimated
+start_date: '2027-03-04'
+end_date: '2027-03-14'
+date_status: confirmed
 months:
-- February
 - March
-timing: Late February into early March (11 days)
+timing: Early-to-mid March (11 days)
 admission: ticketed
 price: Gate admission; headline concerts and rides extra
 organizer: Florida Strawberry Festival Association
 website: https://www.flstrawberryfestival.com/
+contact_url: https://www.flstrawberryfestival.com/contact-us/
+email_source: No email published; phone and contact page only
 founded: 1930
 featured_image: "/assets/images/recipes/strawberry-shortcake-jars.jpg"
 image_alt: Illustrative Florida dish representing Florida Strawberry Festival
@@ -58,9 +59,8 @@ tips:
 - Bring a cooler for flats of berries to take home.
 faq:
 - q: When is the 2027 Florida Strawberry Festival?
-  a: 'Timing: Late February into early March (11 days). Our current estimate for the
-    next edition is February 25, 2027 to March 7, 2027. Confirm the dates with the
-    organizer before you travel.'
+  a: 'The next edition is scheduled for March 4, 2027 to March 14, 2027, per the organizer.
+    Typical timing: Early-to-mid March (11 days).'
 - q: Where is the Florida Strawberry Festival held?
   a: Florida Strawberry Festival Grounds in Plant City, FL (Hillsborough County, Tampa
     Bay).

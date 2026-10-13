@@ -35,6 +35,8 @@ admission: ticketed
 price: Garden admission
 organizer: Fairchild Tropical Botanic Garden
 website: https://fairchildgarden.org/
+contact_url: https://fairchildgarden.org/contact-us/
+email_source: No email published; Fairchild contact form (Events department)
 featured_image: "/assets/images/recipes/mango-coconut-ice-cream.jpg"
 image_alt: Illustrative Florida dish representing Fairchild International Mango Festival
 foods:

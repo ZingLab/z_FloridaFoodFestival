@@ -85,7 +85,7 @@
       {% if post_category == "recipe" %}
         <a href="{{ include.view_all_link | default: '/recipes/' }}" class="btn">{{ include.view_all_text | default: "View All Recipes" }}</a>
       {% elsif post_category == "event" %}
-        <a href="{{ include.view_all_link | default: '/events/' }}" class="btn">{{ include.view_all_text | default: "View All Events" }}</a>
+        <a href="{{ include.view_all_link | default: '/festivals/' }}" class="btn">{{ include.view_all_text | default: "View All Events" }}</a>
       {% else %}
         <a href="{{ include.view_all_link | default: '/blog/' }}" class="btn">{{ include.view_all_text | default: "View All Posts" }}</a>
       {% endif %}

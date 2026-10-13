@@ -34,6 +34,8 @@ admission: ticketed
 price: Premium, limited-availability packages
 organizer: Naples Children & Education Foundation
 website: https://www.napleswinefestival.com/
+email: info@napleswinefestival.com
+email_source: napleswinefestival.com contact page
 founded: 2001
 featured_image: "/assets/images/recipes/peach-caprese-salad.jpg"
 image_alt: Illustrative Florida dish representing Naples Winter Wine Festival

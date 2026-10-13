@@ -34,6 +34,8 @@ admission: free
 price: Free admission; food priced per item
 organizer: Fiesta Pensacola
 website: https://www.fiestapensacola.org/
+contact_url: https://www.fiestapensacola.org/contact
+email_source: No email published; Fiesta Pensacola contact form, 850-433-6512
 featured_image: "/assets/images/recipes/grouper-sandwich.jpg"
 image_alt: Illustrative Florida dish representing Pensacola Seafood Festival
 foods:

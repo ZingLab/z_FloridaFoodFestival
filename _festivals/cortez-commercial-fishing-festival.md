@@ -33,6 +33,9 @@ timing: February
 admission: ticketed
 price: Low-cost gate admission
 organizer: Florida Institute for Saltwater Heritage (FISH)
+website: https://fishcortez.org/commercial-fishing-festival/
+contact_url: https://fishcortez.org/commercial-fishing-festival/
+email_source: No email published on fishcortez.org
 featured_image: "/assets/images/recipes/mayport-shrimp-grits.jpg"
 image_alt: Illustrative Florida dish representing Cortez Commercial Fishing Festival
 foods:

@@ -19,19 +19,22 @@ categories:
 region: Panhandle
 city: Chipley
 county: Washington
-venue: Downtown Chipley
+venue: Jim Trawick Park
 postal_code: '32428'
 latitude: 30.7818
 longitude: -85.5385
 start_date: '2027-06-25'
 end_date: '2027-06-26'
-date_status: estimated
+date_status: confirmed
 months:
 - June
 timing: Late June
 admission: free
 price: Free
 organizer: Washington County Chamber of Commerce
+website: https://www.panhandlewatermelon.com/
+contact_url: https://www.panhandlewatermelon.com/
+email_source: No email published; site and social media for inquiries
 featured_image: "/assets/images/recipes/watermelon-feta-skewers.jpg"
 image_alt: Illustrative Florida dish representing Panhandle Watermelon Festival
 foods:
@@ -51,10 +54,10 @@ tips:
 - Check the schedule for the auction.
 faq:
 - q: When is the 2027 Panhandle Watermelon Festival?
-  a: 'Timing: Late June. Our current estimate for the next edition is June 25, 2027
-    to June 26, 2027. Confirm the dates with the organizer before you travel.'
+  a: 'The next edition is scheduled for June 25, 2027 to June 26, 2027, per the organizer.
+    Typical timing: Late June.'
 - q: Where is the Panhandle Watermelon Festival held?
-  a: Downtown Chipley in Chipley, FL (Washington County, Panhandle).
+  a: Jim Trawick Park in Chipley, FL (Washington County, Panhandle).
 - q: Is the Panhandle Watermelon Festival free?
   a: Yes, general admission is free. Free.
 - q: What food is served at the Panhandle Watermelon Festival?

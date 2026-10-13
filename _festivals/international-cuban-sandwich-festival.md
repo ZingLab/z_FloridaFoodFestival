@@ -10,7 +10,7 @@ keywords: International Cuban Sandwich Festival, International Cuban Sandwich Fe
   genoa salami, cuban bread and pastries
 short: Tampa's celebration of its signature sandwich, with a world-record-sized Cuban
   and a best-sandwich competition.
-rank: 24
+rank: 25
 tier: 2
 tier_label: Major
 scale: Thousands of visitors
@@ -20,19 +20,22 @@ categories:
 region: Tampa Bay
 city: Tampa
 county: Hillsborough
-venue: Ybor City / Tampa
+venue: Centennial Park, Ybor City
+street_address: 1800 E 8th Ave
 postal_code: '33605'
 latitude: 27.9604
 longitude: -82.4371
-start_date: '2027-04-03'
-end_date: '2027-04-04'
+start_date: '2027-03-27'
+end_date: '2027-03-27'
 date_status: estimated
 months:
-- April
+- March
 timing: Spring
 admission: free
 price: Free to attend; sandwiches priced per item
-organizer: International Cuban Sandwich Festival
+organizer: Victor and Jolie Padilla (founders)
+email_source: No official site or email found
+founded: 2011
 featured_image: "/assets/images/recipes/cuban-sandwich.jpg"
 image_alt: Illustrative Florida dish representing International Cuban Sandwich Festival
 foods:
@@ -52,10 +55,10 @@ tips:
 - Check the official channels for the current venue.
 faq:
 - q: When is the 2027 International Cuban Sandwich Festival?
-  a: 'Timing: Spring. Our current estimate for the next edition is April 3, 2027 to
-    April 4, 2027. Confirm the dates with the organizer before you travel.'
+  a: 'Timing: Spring. Our current estimate for the next edition is March 27, 2027.
+    Confirm the dates with the organizer before you travel.'
 - q: Where is the International Cuban Sandwich Festival held?
-  a: Ybor City / Tampa in Tampa, FL (Hillsborough County, Tampa Bay).
+  a: Centennial Park, Ybor City in Tampa, FL (Hillsborough County, Tampa Bay).
 - q: Is the International Cuban Sandwich Festival free?
   a: Yes, general admission is free. Free to attend; sandwiches priced per item.
 - q: What food is served at the International Cuban Sandwich Festival?

@@ -32,7 +32,10 @@ months:
 timing: March
 admission: free
 price: Free admission; food priced per item
-organizer: Okeechobee community organizers
+organizer: Okeechobee Main Street
+website: https://okeechobeemainstreet.org/
+email: info@okeechobeemainstreet.org
+email_source: Okeechobee Main Street announcement (2021). Verify.
 featured_image: "/assets/images/recipes/catfish-po-boy.jpg"
 image_alt: Illustrative Florida dish representing Okeechobee Speckled Perch Festival
 foods:

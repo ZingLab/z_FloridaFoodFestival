@@ -2,8 +2,8 @@
 title: Key West Lobsterfest
 seo_title: 'Key West Lobsterfest 2027: Dates, Food & Tips'
 slug: key-west-lobsterfest
-description: Key West Lobsterfest in Key West, FL (Early August, after lobster mini-season).
-  Kick off Florida spiny lobster season with Duval Street parties and…
+description: Key West Lobsterfest in Key West, FL (August). Kick off Florida spiny
+  lobster season with Duval Street parties and lobster in every style.
 keywords: Key West Lobsterfest, Key West Lobsterfest 2027, Key West food festival,
   Florida Keys food festivals, Florida food festivals, Florida seafood festival, Florida
   street festival festival, florida spiny lobster tails and rolls, lobster mac and
@@ -24,15 +24,17 @@ venue: Duval Street
 postal_code: '33040'
 latitude: 24.5551
 longitude: -81.78
-start_date: '2027-08-05'
-end_date: '2027-08-08'
-date_status: estimated
+start_date: '2027-08-11'
+end_date: '2027-08-15'
+date_status: confirmed
 months:
 - August
-timing: Early August, after lobster mini-season
+timing: August
 admission: free
 price: Free street fair; some events ticketed
 organizer: Key West Lobsterfest
+website: https://www.keywestlobsterfest.com/
+email_source: No email published on keywestlobsterfest.com
 featured_image: "/assets/images/recipes/crab-corn-chowder.jpg"
 image_alt: Illustrative Florida dish representing Key West Lobsterfest
 foods:
@@ -53,9 +55,8 @@ tips:
 - Try a classic lobster roll and Key lime pie.
 faq:
 - q: When is the 2027 Key West Lobsterfest?
-  a: 'Timing: Early August, after lobster mini-season. Our current estimate for the
-    next edition is August 5, 2027 to August 8, 2027. Confirm the dates with the organizer
-    before you travel.'
+  a: 'The next edition is scheduled for August 11, 2027 to August 15, 2027, per the
+    organizer. Typical timing: August.'
 - q: Where is the Key West Lobsterfest held?
   a: Duval Street in Key West, FL (Monroe County, Florida Keys).
 - q: Is the Key West Lobsterfest free?

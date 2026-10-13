@@ -40,6 +40,7 @@ admission: park
 price: Included with EPCOT admission; food and drinks priced per item
 organizer: Walt Disney World Resort
 website: https://disneyworld.disney.go.com/events-tours/epcot/epcot-international-flower-and-garden-festival/
+email_source: Theme park event; no public festival email (use park media relations)
 founded: 1994
 featured_image: "/assets/images/recipes/citrus-avocado-salad.jpg"
 image_alt: Illustrative Florida dish representing EPCOT International Flower & Garden

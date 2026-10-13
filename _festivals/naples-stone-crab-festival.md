@@ -26,13 +26,16 @@ latitude: 26.142
 longitude: -81.7948
 start_date: '2026-10-23'
 end_date: '2026-10-25'
-date_status: estimated
+date_status: confirmed
 months:
 - October
 timing: Late October, just after stone crab season opens
 admission: free
 price: Free admission; food priced per item
 organizer: Naples waterfront businesses
+website: https://www.stonecrabfestival.com/
+contact_url: https://www.stonecrabfestival.com/
+email_source: No email published; vendor contact form only
 featured_image: "/assets/images/recipes/stone-crab-claws.jpg"
 image_alt: Illustrative Florida dish representing Naples Stone Crab Festival
 foods:
@@ -52,9 +55,8 @@ tips:
 - Walk the nearby shops and marinas.
 faq:
 - q: When is the 2026 Naples Stone Crab Festival?
-  a: 'Timing: Late October, just after stone crab season opens. Our current estimate
-    for the next edition is October 23, 2026 to October 25, 2026. Confirm the dates
-    with the organizer before you travel.'
+  a: 'The next edition is scheduled for October 23, 2026 to October 25, 2026, per
+    the organizer. Typical timing: Late October, just after stone crab season opens.'
 - q: Where is the Naples Stone Crab Festival held?
   a: Naples Bay waterfront in Naples, FL (Collier County, Southwest Florida).
 - q: Is the Naples Stone Crab Festival free?

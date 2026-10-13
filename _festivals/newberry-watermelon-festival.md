@@ -20,7 +20,7 @@ categories:
 region: North Central Florida
 city: Newberry
 county: Alachua
-venue: Downtown Newberry
+venue: Countryway Town Center
 postal_code: '32669'
 latitude: 29.6461
 longitude: -82.6065
@@ -32,7 +32,10 @@ months:
 timing: May
 admission: free
 price: Free
-organizer: Newberry Watermelon Festival
+organizer: Newberry Watermelon Festival committee
+website: https://www.newberryfl.gov/
+contact_url: https://www.newberryfl.gov/
+email_source: No email found; City of Newberry
 founded: 1946
 featured_image: "/assets/images/recipes/watermelon-feta-skewers.jpg"
 image_alt: Illustrative Florida dish representing Newberry Watermelon Festival
@@ -56,7 +59,7 @@ faq:
   a: 'Timing: May. Our current estimate for the next edition is May 15, 2027. Confirm
     the dates with the organizer before you travel.'
 - q: Where is the Newberry Watermelon Festival held?
-  a: Downtown Newberry in Newberry, FL (Alachua County, North Central Florida).
+  a: Countryway Town Center in Newberry, FL (Alachua County, North Central Florida).
 - q: Is the Newberry Watermelon Festival free?
   a: Yes, general admission is free. Free.
 - q: What food is served at the Newberry Watermelon Festival?

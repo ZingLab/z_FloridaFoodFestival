@@ -2,8 +2,9 @@
 title: Grant Seafood Festival
 seo_title: 'Grant Seafood Festival 2027: Dates, Food & Tips'
 slug: grant-seafood-festival
-description: Grant Seafood Festival in Grant-Valkaria, FL (Late February / early March).
-  A volunteer-run Space Coast tradition serving seafood on the Indian River…
+description: Grant Seafood Festival in Grant-Valkaria, FL (First weekend in March).
+  A volunteer-run Space Coast tradition serving seafood on the Indian River since
+  the…
 keywords: Grant Seafood Festival, Grant Seafood Festival 2027, Grant-Valkaria food
   festival, Treasure & Space Coast food festivals, Florida food festivals, Florida
   seafood festival, Florida community festival, fried shrimp and fish, clam chowder
@@ -23,15 +24,18 @@ venue: Grant Historical Society grounds
 postal_code: '32949'
 latitude: 27.9284
 longitude: -80.5317
-start_date: '2027-02-27'
-end_date: '2027-02-28'
-date_status: estimated
+start_date: '2027-03-06'
+end_date: '2027-03-07'
+date_status: confirmed
 months:
-- February
-timing: Late February / early March
+- March
+timing: First weekend in March
 admission: ticketed
 price: Low-cost gate admission
 organizer: Grant Seafood Festival volunteers
+website: https://grantseafoodfestival.com/
+contact_url: https://grantseafoodfestival.com/contact
+email_source: No email published; contact form, 321-327-8720
 founded: 1966
 featured_image: "/assets/images/recipes/shrimp-and-grits.jpg"
 image_alt: Illustrative Florida dish representing Grant Seafood Festival
@@ -54,9 +58,8 @@ tips:
 - Wear sunscreen and a hat.
 faq:
 - q: When is the 2027 Grant Seafood Festival?
-  a: 'Timing: Late February / early March. Our current estimate for the next edition
-    is February 27, 2027 to February 28, 2027. Confirm the dates with the organizer
-    before you travel.'
+  a: 'The next edition is scheduled for March 6, 2027 to March 7, 2027, per the organizer.
+    Typical timing: First weekend in March.'
 - q: Where is the Grant Seafood Festival held?
   a: Grant Historical Society grounds in Grant-Valkaria, FL (Brevard County, Treasure
     & Space Coast).

@@ -34,6 +34,9 @@ admission: ticketed
 price: Gate admission; rides and food extra
 organizer: Florida State Fair Authority
 website: https://www.floridastatefair.com/
+email: info@floridastatefair.com
+contact_url: https://www.floridastatefair.com/contact-us/
+email_source: floridastatefair.com contact page
 founded: 1904
 featured_image: "/assets/images/recipes/sweet-corn-fritters.jpg"
 image_alt: Illustrative Florida dish representing Florida State Fair

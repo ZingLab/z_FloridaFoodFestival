@@ -10,7 +10,7 @@ keywords: 'Cedar Key Seafood Festival, Cedar Key Seafood Festival 2026, Cedar Ke
   chowder, smoked fish dip'
 short: Farm-raised clams, smoked fish and arts and crafts in a charming Gulf island
   town.
-rank: 28
+rank: 29
 tier: 3
 tier_label: Regional
 scale: Thousands of visitors over a weekend
@@ -26,13 +26,15 @@ latitude: 29.1386
 longitude: -83.0351
 start_date: '2026-10-17'
 end_date: '2026-10-18'
-date_status: estimated
+date_status: confirmed
 months:
 - October
 timing: Third weekend in October
 admission: free
 price: Free admission; food priced per item
 organizer: Cedar Key Lions Club
+email: cedarkeylionsclub@gmail.com
+email_source: Older cedarkey.org festival page (Cedar Key Lions Club). Verify.
 featured_image: "/assets/images/recipes/smoked-mullet-dip.jpg"
 image_alt: Illustrative Florida dish representing Cedar Key Seafood Festival
 foods:
@@ -52,9 +54,8 @@ tips:
 - Stay for sunset on the Gulf.
 faq:
 - q: When is the 2026 Cedar Key Seafood Festival?
-  a: 'Timing: Third weekend in October. Our current estimate for the next edition
-    is October 17, 2026 to October 18, 2026. Confirm the dates with the organizer
-    before you travel.'
+  a: 'The next edition is scheduled for October 17, 2026 to October 18, 2026, per
+    the organizer. Typical timing: Third weekend in October.'
 - q: Where is the Cedar Key Seafood Festival held?
   a: Downtown Cedar Key in Cedar Key, FL (Levy County, North Central Florida).
 - q: Is the Cedar Key Seafood Festival free?
