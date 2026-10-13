@@ -10,7 +10,7 @@
 /* Links inside these components keep a readable color
    (global a:hover / a:visited are white for the dark nav) */
 .fest-directory, .festival-page, .organizer-cta, .ad-intro, .ad-placements,
-.ad-free, .ad-rules, .inquiry-section, .claim-benefits, .festival-home {
+.ad-claim, .ad-rules, .inquiry-section, .claim-benefits, .festival-home {
   a:not(.btn) { color: var(--primary-color); }
   a:not(.btn):hover { color: var(--primary-color-dark, #d9531f); }
 }
@@ -122,7 +122,6 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
 .fest-card[hidden] { display: none; }
 .fest-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0, 0, 0, .12); }
 .fest-card.is-sponsored { outline: 2px solid var(--accent-color); }
-.fest-card.is-past { opacity: .65; }
 
 .fest-card-media { position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; }
 .fest-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
@@ -379,8 +378,8 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
 }
 .ad-card code, .ad-rules code { font-size: .85em; background: var(--section-bg); padding: 0 .25rem; border-radius: 3px; }
 
-.ad-free { padding: 3rem 0 1rem; text-align: center; }
-.ad-free h2, .ad-rules h2, .claim-benefits h2 { font-size: 1.8rem; }
+.ad-claim { padding: 3rem 0 1rem; text-align: center; scroll-margin-top: 1rem; }
+.ad-claim h2, .ad-rules h2, .claim-benefits h2 { font-size: 1.8rem; }
 .ad-rules { padding: 2rem 0; }
 .ad-rules ul { list-style: none; }
 .ad-rules li { padding: 1rem 0; border-bottom: 1px solid var(--border-color); }
@@ -451,7 +450,7 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
   .ad-lead { font-size: 1.05rem; text-align: left; }
   .inquiry-form h2 { font-size: 1.4rem; }
   .ad-card { padding: 1.4rem; }
-  .ad-free h2, .ad-rules h2, .claim-benefits h2 { font-size: 1.4rem; }
+  .ad-claim h2, .ad-rules h2, .claim-benefits h2 { font-size: 1.4rem; }
   .ad-placements { padding: 2rem 0; }
   .inquiry-field input, .inquiry-field select, .inquiry-field textarea { font-size: 16px; }
   .festival-hero h1 { font-size: 2rem; }
@@ -468,7 +467,7 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
 .outreach-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1rem 0 1.5rem; }
 .outreach-actions #outreach-status { font-size: .9rem; color: var(--fest-teal-dark); }
 .outreach-table-wrap { overflow-x: auto; border: 1px solid var(--border-color); border-radius: 10px; }
-.outreach-table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: .88rem; }
+.outreach-table { width: 100%; min-width: 1100px; border-collapse: collapse; font-size: .88rem; }
 .outreach-table th {
   position: sticky;
   top: 0;
@@ -485,3 +484,81 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
 .outreach-table a, .outreach-table a:visited { color: var(--primary-color); word-break: break-all; }
 .outreach-flag { font-size: .68rem; font-weight: 700; text-transform: uppercase; background: #fff3ec; color: #b4471a; padding: .05rem .35rem; border-radius: 4px; }
 .outreach-missing { color: #9aa5ae; }
+.outreach-table .outreach-pitch, .outreach-table .outreach-pitch:visited { color: #fff; white-space: nowrap; word-break: normal; }
+
+/* ---------- Featured festival (home page, paid) ---------- */
+.featured-festivals { padding: 2.5rem 0 1rem; }
+.featured-card {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+  border: 2px solid var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+.featured-card-media { display: block; min-height: 100%; }
+.featured-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 16 / 10; }
+.featured-card-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.featured-kicker { margin-bottom: .5rem; }
+.featured-label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--primary-color);
+}
+.featured-card h2.featured-title { font-size: 2rem; line-height: 1.15; margin: 0 0 .5rem; }
+.featured-card .featured-title a, .featured-card .featured-title a:visited { color: var(--fest-ink); }
+.featured-card .featured-title a:hover { color: var(--primary-color); text-decoration: none; }
+.featured-when { font-weight: 600; color: var(--fest-teal-dark); }
+.featured-message { font-size: 1.05rem; color: #444; }
+.featured-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.featured-empty {
+  text-align: center;
+  font-size: .9rem;
+  color: var(--fest-muted);
+  border: 1px dashed var(--border-color);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  margin: 0;
+}
+.featured-empty[hidden] { display: none; }
+.featured-empty a, .featured-empty a:visited { color: var(--primary-color); font-weight: 600; }
+.fest-card.is-featured { outline: 2px solid var(--accent-color); }
+.fest-flag--featured { background: var(--primary-color); color: #fff; }
+
+@media (max-width: 768px) {
+  .featured-card { grid-template-columns: 1fr; }
+  .featured-card-body { padding: 1.25rem; }
+  .featured-card h2.featured-title { font-size: 1.5rem; }
+  .featured-festivals { padding: 1.5rem 0 .5rem; }
+}
+
+/* Shown on a festival page once its end date has passed */
+.festival-ended-notice { background: #fdecea; border-bottom: 1px solid #f5c2bc; padding: .75rem 0; font-size: .95rem; color: #7a271a; }
+.festival-ended-notice[hidden] { display: none; }
+.festival-page .festival-ended-notice a, .festival-page .festival-ended-notice a:visited { color: #7a271a; font-weight: 600; text-decoration: underline; }
+.outreach-ended { font-size: .68rem; font-weight: 700; text-transform: uppercase; background: #fdecea; color: #7a271a; padding: .05rem .35rem; border-radius: 4px; }
+
+/* Claimed / sponsored status (replaces the Claim and Sponsor buttons) */
+.festival-status-pill {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  background: #e3f6f4;
+  color: var(--fest-teal-dark);
+  margin-bottom: .5rem;
+}
+.festival-box--claimed { background: #e3f6f4; }
+.festival-box--claimed .festival-status-pill { background: #fff; }
+.festival-box--sponsored { background: #fff8e6; }
+.festival-box--sponsored .festival-status-pill, .organizer-cta-card--accent .festival-status-pill { background: #fff8e6; color: #8a5a00; border: 1px solid #f3e2b3; }
+.festival-box p:last-child { margin-bottom: 0; }
+.organizer-cta-more { font-size: .9rem; margin: 0; }
+[data-sponsor-cta][hidden] { display: none; }
+.organizer-cta-card .festival-status-pill { background: #fff; }
+.organizer-cta-card--accent .festival-status-pill { background: #fff8e6; }

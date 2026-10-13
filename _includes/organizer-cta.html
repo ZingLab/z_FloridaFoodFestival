@@ -1,16 +1,30 @@
-<!-- _includes/organizer-cta.html -->
+<!-- _includes/organizer-cta.html
+     Params: festival (on a festival page), claim_href, sponsor_href, sponsored (active sponsorship) -->
+{% assign oc = include.festival %}
 <section class="organizer-cta">
   <div class="container">
     <div class="organizer-cta-grid">
       <div class="organizer-cta-card">
         <h2>Run a Florida food festival?</h2>
-        <p>Claim your free listing to correct dates, add ticket links and photos, and earn a <strong>Verified by organizer</strong> badge.</p>
-        <a href="{{ include.claim_href | default: '/claim/' }}" class="btn">Claim {% if include.festival %}this{% else %}your{% endif %} page</a>
+        {% if oc and oc.claimed %}
+        <p>This page is managed by {{ oc.claimed_by | default: "the festival's organizers" }}. Organizers of other festivals can claim their listing and our team will keep it up to date. Pricing on request.</p>
+        <p class="festival-status-pill">✓ Event is claimed</p>
+        <p class="organizer-cta-more"><a href="/claim/">Claim a different festival</a></p>
+        {% else %}
+        <p>Claim your listing and our team will keep dates, ticket links and photos up to date for you, with a <strong>Verified by organizer</strong> badge. Pricing on request.</p>
+        <a href="{{ include.claim_href | default: '/claim/' }}" class="btn">Claim {% if oc %}this{% else %}your{% endif %} page</a>
+        {% endif %}
       </div>
       <div class="organizer-cta-card organizer-cta-card--accent">
         <h2>Reach hungry festival-goers</h2>
         <p>Feature your festival, restaurant, brewery or brand in front of people actively planning their next food trip in Florida.</p>
-        <a href="{{ include.sponsor_href | default: '/advertise/' }}" class="btn btn-dark">{% if include.festival %}Sponsor this page{% else %}See sponsorship options{% endif %}</a>
+        {% if oc and include.sponsored %}
+        <div data-sponsor-status>
+          <p class="festival-status-pill">Event is sponsored</p>
+          <p class="organizer-cta-more"><a href="/advertise/">See other sponsorship options</a></p>
+        </div>
+        {% endif %}
+        <a href="{{ include.sponsor_href | default: '/advertise/' }}" class="btn btn-dark"{% if oc %} data-sponsor-cta{% endif %}{% if oc and include.sponsored %} hidden{% endif %}>{% if oc %}Sponsor this page{% else %}See sponsorship options{% endif %}</a>
       </div>
     </div>
   </div>

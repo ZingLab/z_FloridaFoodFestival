@@ -19,15 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     sort: document.getElementById('f-sort')
   };
 
-  // Mark festivals that are happening now or already over
-  const today = new Date().toISOString().slice(0, 10);
+  // Ended festivals and expired placements were already removed by festival-expiry.js
+  const today = window.FFF_TODAY;
+  document.getElementById('fest-total').textContent = cards.length;
   cards.forEach(card => {
-    const status = card.querySelector('.fest-card-when');
-    if (card.dataset.start <= today && card.dataset.end >= today) {
+    if (card.dataset.start <= today) {
       card.classList.add('is-live');
-      status.insertAdjacentHTML('afterbegin', '<span class="fest-live">Happening now</span> ');
-    } else if (card.dataset.end < today) {
-      card.classList.add('is-past');
+      card.querySelector('.fest-card-when').insertAdjacentHTML('afterbegin', '<span class="fest-live">Happening now</span> ');
     }
   });
 
@@ -61,13 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const sorted = cards.slice().sort((a, b) => {
-      if (sort === 'date') {
-        // Past editions sink to the bottom
-        const pa = a.classList.contains('is-past'), pb = b.classList.contains('is-past');
-        if (pa !== pb) return pa ? 1 : -1;
-        return a.dataset.start.localeCompare(b.dataset.start);
-      }
+      if (sort === 'date') return a.dataset.start.localeCompare(b.dataset.start);
       if (sort === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+      // Default "Biggest first" order pins featured festivals to the top
+      const fa = a.classList.contains('is-featured'), fb = b.classList.contains('is-featured');
+      if (fa !== fb) return fa ? -1 : 1;
       return Number(a.dataset.rank) - Number(b.dataset.rank);
     });
     sorted.forEach(card => grid.appendChild(card));

@@ -11,6 +11,8 @@ redirect_from:
   - /events/
 ---
 {% assign festivals = site.festivals | sort: "rank" %}
+{% assign active_count = 0 %}
+{% for f in festivals %}{% include festival-state.html festival=f %}{% unless fs_ended %}{% assign active_count = active_count | plus: 1 %}{% endunless %}{% endfor %}
 
 {%- capture all_cats -%}{% for f in festivals %}{{ f.categories | join: "|" }}{% unless forloop.last %}|{% endunless %}{% endfor %}{%- endcapture -%}
 {% assign categories = all_cats | split: "|" | uniq | sort %}
@@ -19,7 +21,7 @@ redirect_from:
 <section class="page-header fest-header">
   <div class="container">
     <h1>Florida Food Festivals</h1>
-    <p class="subtitle">{{ festivals.size }} festivals across the Sunshine State, from EPCOT's global marketplaces to hometown frog leg fries.</p>
+    <p class="subtitle"><span id="fest-total">{{ active_count }}</span> festivals across the Sunshine State, from EPCOT's global marketplaces to hometown frog leg fries.</p>
   </div>
 </section>
 
@@ -88,12 +90,14 @@ redirect_from:
     </form>
 
     <div class="fest-status">
-      <p id="fest-count" aria-live="polite">Showing {{ festivals.size }} festivals</p>
+      <p id="fest-count" aria-live="polite">Showing {{ active_count }} festivals</p>
       <button type="button" class="fest-reset" id="fest-reset" hidden>Clear filters</button>
     </div>
 
     <div class="fest-grid fest-grid--compact" id="fest-grid">
       {% for f in festivals %}
+        {% include festival-state.html festival=f %}
+        {% if fs_ended %}{% continue %}{% endif %}
         {% include festival-card.html festival=f compact=true %}
       {% endfor %}
     </div>

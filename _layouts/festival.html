@@ -6,7 +6,11 @@ layout: default
 {% capture sponsor_mailto %}{% include festival-mailto.html festival=f action="sponsor" %}{% endcapture %}
 {% assign claim_mailto = claim_mailto | strip %}
 {% assign sponsor_mailto = sponsor_mailto | strip %}
-{% assign has_sponsor = false %}{% if f.sponsor and f.sponsor.name %}{% assign has_sponsor = true %}{% endif %}
+{% include festival-state.html festival=f %}
+{% comment %} Keep this page's own state: related cards below re-run festival-state for other festivals. {% endcomment %}
+{% assign page_ended = fs_ended %}
+{% assign has_sponsor = fs_sponsored %}
+{% assign page_sponsor_until = fs_sponsor_until %}
 {% if f.website %}
   {% if f.website contains "?" %}{% assign utm_join = "&" %}{% else %}{% assign utm_join = "?" %}{% endif %}
   {% assign official_url = f.website | append: utm_join | append: "utm_source=floridafoodfestival&utm_medium=referral&utm_campaign=festival_listing" %}
@@ -14,7 +18,7 @@ layout: default
 {% capture map_query %}{{ f.venue }}, {% if f.street_address %}{{ f.street_address }}, {% endif %}{{ f.city }}, FL {{ f.postal_code }}{% endcapture %}
 {% assign map_url = map_query | strip | url_encode | prepend: "https://www.google.com/maps/search/?api=1&query=" %}
 
-<article class="festival-page">
+<article class="festival-page" data-festival-end="{{ f.end_date }}"{% if has_sponsor %} data-sponsor-until="{{ page_sponsor_until }}"{% endif %}>
   <header class="festival-hero" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('{{ f.featured_image }}');">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -40,8 +44,14 @@ layout: default
     </div>
   </header>
 
+  <div class="festival-ended-notice" data-ended-notice{% unless page_ended %} hidden{% endunless %}>
+    <div class="container">
+      <strong>This year's festival has ended.</strong> Dates for the next edition haven't been posted yet. <a href="/festivals/">See upcoming Florida food festivals</a>.
+    </div>
+  </div>
+
   {% if has_sponsor %}
-  <div class="festival-presented">
+  <div class="festival-presented" data-sponsor-block>
     <div class="container">
       <span class="fest-flag">Sponsored</span>
       Presented by
@@ -124,20 +134,32 @@ layout: default
           <dd class="festival-cats">{% for c in f.categories %}<a href="/festivals/?type={{ c | url_encode }}">{{ c }}</a>{% endfor %}</dd>
           {% if f.email and f.email_personal != true %}<dt>Organizer email</dt><dd><a href="mailto:{{ f.email }}">{{ f.email }}</a></dd>{% endif %}
           <dt>Official site</dt>
-          <dd>{% if official_url %}<a href="{{ official_url }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}Not listed yet. <a href="{{ claim_mailto }}">Organizers, add it</a>{% endif %}</dd>
+          <dd>{% if official_url %}<a href="{{ official_url }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}Not listed yet.{% unless f.claimed %} <a href="{{ claim_mailto }}">Organizers, add it</a>{% endunless %}{% endif %}</dd>
         </dl>
       </div>
 
-      {% unless f.claimed %}
+      {% if f.claimed %}
+      <div class="festival-box festival-box--claimed">
+        <p class="festival-status-pill">✓ Event is claimed</p>
+        <p>{% if f.claimed_by %}{{ f.claimed_by }} manages{% else %}The festival's organizers manage{% endif %} the details on this page.</p>
+      </div>
+      {% else %}
       <div class="festival-box festival-box--claim">
         <h3>Is this your festival?</h3>
-        <p>Claim this page for free to update dates, add tickets and photos, and get a verified badge.</p>
+        <p>Claim this page and our team will update dates, tickets and photos for you and add a verified badge. Pricing on request.</p>
         <a class="btn btn-small" href="{{ claim_mailto }}">Claim this page</a>
       </div>
-      {% endunless %}
+      {% endif %}
 
-      {% unless has_sponsor %}
-      <div class="festival-box festival-box--sponsor">
+      {% if has_sponsor %}
+      <div class="festival-box festival-box--sponsored" data-sponsor-status>
+        <p class="festival-status-pill">Event is sponsored</p>
+        <p>This page is presented by {% if f.sponsor.url %}<a href="{{ f.sponsor.url }}" target="_blank" rel="sponsored noopener">{{ f.sponsor.name }}</a>{% else %}<strong>{{ f.sponsor.name }}</strong>{% endif %}.</p>
+      </div>
+      {% endif %}
+
+      {% unless page_ended %}
+      <div class="festival-box festival-box--sponsor" data-sponsor-cta{% if has_sponsor %} hidden{% endif %}>
         <h3>Sponsor this page</h3>
         <p>Put your restaurant, hotel, brewery or brand in front of people planning a trip to the {{ f.title }}.</p>
         <a class="btn btn-small btn-dark" href="{{ sponsor_mailto }}">Become the presenting sponsor</a>
@@ -149,16 +171,23 @@ layout: default
     </aside>
   </div>
 
-  {% assign related = site.festivals | where: "region", f.region | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
-  {% if related.size < 3 %}
-    {% assign related = site.festivals | where: "tier", f.tier | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
+  {% comment %} Related festivals: same region (or same size tier), excluding ended ones. {% endcomment %}
+  {% assign related_pool = site.festivals | where: "region", f.region | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
+  {% capture related_slugs %}{% for x in related_pool %}{% include festival-state.html festival=x %}{% unless fs_ended %}{{ x.slug }}|{% endunless %}{% endfor %}{% endcapture %}
+  {% assign related_slugs = related_slugs | split: "|" %}
+  {% if related_slugs.size < 3 %}
+    {% assign related_pool = site.festivals | where: "tier", f.tier | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
+    {% capture related_slugs %}{% for x in related_pool %}{% include festival-state.html festival=x %}{% unless fs_ended %}{{ x.slug }}|{% endunless %}{% endfor %}{% endcapture %}
+    {% assign related_slugs = related_slugs | split: "|" %}
   {% endif %}
+  {% assign related = "" | split: "" %}
+  {% for slug in related_slugs %}{% assign x = site.festivals | where: "slug", slug | first %}{% assign related = related | push: x %}{% endfor %}
   {% if related.size > 0 %}
   <section class="festival-related">
     <div class="container">
       <h2>More festivals {% if related.first.region == f.region %}in {{ f.region }}{% else %}like this{% endif %}</h2>
-      <div class="fest-grid fest-grid--compact">
-        {% for r in related limit: 4 %}{% include festival-card.html festival=r compact=true %}{% endfor %}
+      <div class="fest-grid fest-grid--compact" data-limit="4">
+        {% for r in related limit: 6 %}{% include festival-card.html festival=r compact=true %}{% endfor %}
       </div>
       <p class="view-all-link"><a class="btn" href="/festivals/">Browse all Florida food festivals</a></p>
     </div>
@@ -170,4 +199,4 @@ layout: default
   </div>
 </article>
 
-{% include organizer-cta.html festival=f claim_href=claim_mailto sponsor_href=sponsor_mailto %}
+{% include organizer-cta.html festival=f claim_href=claim_mailto sponsor_href=sponsor_mailto sponsored=has_sponsor %}

@@ -1,0 +1,40 @@
+<!-- _includes/featured-festivals.html: paid "Featured festival" slot at the top of the home page.
+     A festival is featured through its `featured_until` date, and never after the festival itself ends. -->
+{% assign ranked = site.festivals | sort: "rank" %}
+{% capture featured_slugs %}{% for f in ranked %}{% include festival-state.html festival=f %}{% if fs_featured %}{{ f.slug }}|{% endif %}{% endfor %}{% endcapture %}
+{% assign featured_slugs = featured_slugs | split: "|" %}
+
+<section class="featured-festivals" id="featured-festival">
+  <div class="container">
+    {% for slug in featured_slugs limit: 3 %}
+      {% assign f = site.festivals | where: "slug", slug | first %}
+      {% include festival-state.html festival=f %}
+      {% if f.website %}
+        {% if f.website contains "?" %}{% assign utm_join = "&" %}{% else %}{% assign utm_join = "?" %}{% endif %}
+        {% assign official_url = f.website | append: utm_join | append: "utm_source=floridafoodfestival&utm_medium=referral&utm_campaign=featured_festival" %}
+      {% else %}
+        {% assign official_url = nil %}
+      {% endif %}
+      <article class="featured-card" data-featured-until="{{ fs_featured_until }}">
+        <a class="featured-card-media" href="{{ f.url }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ f.featured_image }}" alt="" width="640" height="400">
+        </a>
+        <div class="featured-card-body">
+          <p class="featured-kicker"><span class="featured-label">Featured festival</span> <span class="fest-flag">Sponsored</span></p>
+          <h2 class="featured-title"><a href="{{ f.url }}">{{ f.title }}</a></h2>
+          <p class="featured-when"><time datetime="{{ f.start_date }}">{% include festival-dates.html festival=f %}</time> · {{ f.city }}, FL</p>
+          <p class="featured-message">{{ f.featured_message | default: f.short }}</p>
+          <div class="featured-actions">
+            <a class="btn" href="{{ f.url }}">Festival details</a>
+            {% if official_url %}<a class="btn btn-ghost-dark" href="{{ official_url }}" target="_blank" rel="sponsored noopener">Official site &amp; tickets</a>{% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+
+    <p class="featured-empty"{% if featured_slugs.size > 0 %} hidden{% endif %}>
+      <span>Run a Florida food festival?</span> <a href="/advertise/#featured-listing">Feature it here, at the top of our home page.</a>
+    </p>
+  </div>
+</section>
+

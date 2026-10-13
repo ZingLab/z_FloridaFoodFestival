@@ -1,0 +1,31 @@
+{%- comment -%}
+  Computes a festival's display state as of the build date. Sets (in the caller's scope):
+    fs_ended            true once end_date has passed
+    fs_featured_until   last day of the featured placement: featured_until, capped at end_date ("" if none)
+    fs_featured         featured placement is active
+    fs_sponsor_until    last day of the "Presented by" sponsorship: sponsor.until, capped at end_date ("" if none)
+    fs_sponsored        sponsorship is active
+  Sponsorships always end when the festival ends. assets/js/festival-expiry.js applies the
+  same rules in the browser between builds.
+{%- endcomment -%}
+{%- assign fs = include.festival -%}
+{%- assign fs_today = site.time | date: "%Y-%m-%d" -%}
+{%- assign fs_end = fs.end_date | date: "%Y-%m-%d" -%}
+{%- assign fs_ended = false -%}{%- if fs_end < fs_today -%}{%- assign fs_ended = true -%}{%- endif -%}
+
+{%- assign fs_featured_until = "" -%}
+{%- if fs.featured_until -%}
+  {%- assign fs_featured_until = fs.featured_until | date: "%Y-%m-%d" -%}
+  {%- if fs_end < fs_featured_until -%}{%- assign fs_featured_until = fs_end -%}{%- endif -%}
+{%- endif -%}
+{%- assign fs_featured = false -%}{%- if fs_featured_until != "" and fs_featured_until >= fs_today -%}{%- assign fs_featured = true -%}{%- endif -%}
+
+{%- assign fs_sponsor_until = "" -%}
+{%- if fs.sponsor and fs.sponsor.name -%}
+  {%- assign fs_sponsor_until = fs_end -%}
+  {%- if fs.sponsor.until -%}
+    {%- assign fs_sponsor_cap = fs.sponsor.until | date: "%Y-%m-%d" -%}
+    {%- if fs_sponsor_cap < fs_sponsor_until -%}{%- assign fs_sponsor_until = fs_sponsor_cap -%}{%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+{%- assign fs_sponsored = false -%}{%- if fs_sponsor_until != "" and fs_sponsor_until >= fs_today -%}{%- assign fs_sponsored = true -%}{%- endif -%}

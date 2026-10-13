@@ -8,6 +8,7 @@ sitemap: false
 ---
 {% assign festivals = site.festivals | sort: "rank" %}
 {% assign with_email = festivals | where_exp: "f", "f.email" %}
+{% assign pitch_subject = "Your page on FloridaFoodFestival.com" %}
 
 <section class="outreach">
   <div class="container">
@@ -31,6 +32,7 @@ sitemap: false
             <th>Email</th>
             <th>Website</th>
             <th>Our page</th>
+            <th>Pitch</th>
             <th>Contact notes</th>
           </tr>
         </thead>
@@ -40,7 +42,7 @@ sitemap: false
             <td>{{ f.rank }}</td>
             <td><strong>{{ f.title }}</strong><br><small>{{ f.tier_label }} · {{ f.city }}, FL{% if f.claimed %} · ✓ claimed{% endif %}</small></td>
             <td>{{ f.region }}</td>
-            <td>{% include festival-dates.html festival=f %}<br><small>{{ f.date_status }}</small></td>
+            <td>{% include festival-dates.html festival=f %}<br><small>{{ f.date_status }}</small>{% include festival-state.html festival=f %}{% if fs_ended %} <span class="outreach-ended">ended</span>{% endif %}</td>
             <td>
               {% if f.email %}<a href="mailto:{{ f.email }}">{{ f.email }}</a>{% if f.email_personal %} <span class="outreach-flag">personal</span>{% endif %}{% else %}<span class="outreach-missing">none found</span>{% endif %}
               {% if f.sponsorship_email %}<br><small>Sponsorship: <a href="mailto:{{ f.sponsorship_email }}">{{ f.sponsorship_email }}</a></small>{% endif %}
@@ -49,7 +51,19 @@ sitemap: false
               {% if f.website %}<a href="{{ f.website }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}<span class="outreach-missing">none</span>{% endif %}
               {% if f.contact_url and f.contact_url != f.website %}<br><small><a href="{{ f.contact_url }}" target="_blank" rel="noopener">contact page</a></small>{% endif %}
             </td>
-            <td><a href="{{ f.url }}">{{ site.url | remove: "https://" }}{{ f.url }}</a></td>
+            <td><a href="{{ f.url }}" title="{{ site.url }}{{ f.url }}">View page</a></td>
+            <td>
+              {% if f.email %}
+                {% capture pitch_body %}Hello,
+
+I am Robert from FloridaFoodFestival.com and we would love to promote your festival on our site. We have a standard page up, link below, and would love to expand the page to meet your needs. We receive thousands of visitors and are happy to send them your way. We also allow event coordinators to sponsor events, to get {{ f.title }} to the top of our home page. Let's talk soon.
+
+{{ site.url | append: f.url }}
+
+-Robert Allen, Sebastian Florida, FloridaFoodFestival.com{% endcapture %}
+                <a class="btn btn-small outreach-pitch" href="mailto:{{ f.email }}?subject={{ pitch_subject | url_encode | replace: '+', '%20' }}&amp;body={{ pitch_body | url_encode | replace: '+', '%20' }}">Email pitch</a>
+              {% else %}<span class="outreach-missing">no email</span>{% endif %}
+            </td>
             <td><small>{{ f.email_source }}</small></td>
           </tr>
           {% endfor %}

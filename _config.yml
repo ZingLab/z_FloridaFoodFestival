@@ -4,6 +4,7 @@ email: info@floridafoodfestival.com
 description: >- 
   Join us at the Florida Food Festival, showcasing the finest cuisine, 
   local produce, and culinary talent that Florida has to offer.
+timezone: America/New_York # build dates (festival end dates, sponsorships) use Florida time
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://floridafoodfestival.com" # the base hostname & protocol
 twitter_username: flafoodfest
@@ -21,12 +22,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-redirect-from
 
-# Pagination settings
-paginate: 9
-paginate_path: "/events/page:num/"
 
 # Permalink structure for blog posts
 permalink: /events/:year/:month/:day/:title/

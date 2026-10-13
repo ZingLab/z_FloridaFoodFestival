@@ -1,5 +1,6 @@
 {% assign f = include.festival %}
 {% assign f_url = site.url | append: f.url %}
+{% include festival-state.html festival=f %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +47,7 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "description": {{ f.price | jsonify }}
-      }{% endif %}{% if f.sponsor and f.sponsor.name %},
+      }{% endif %}{% if fs_sponsored %},
       "sponsor": {
         "@type": "Organization",
         "name": {{ f.sponsor.name | jsonify }}{% if f.sponsor.url %},

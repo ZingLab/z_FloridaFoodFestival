@@ -60,7 +60,9 @@ Key front matter fields:
 - `rank` / `tier` (1 Signature – 4 Hometown): default "Biggest first" order
 - `start_date` / `end_date` (ISO) and `date_status` (`estimated` or `confirmed`): drive sorting, the "est." badge and the FoodEvent JSON-LD
 - `months`, `region`, `categories`, `admission` (`free` | `ticketed` | `park`): power the filters
-- `claimed: true` shows the "Verified by organizer" badge and hides the claim box
+- `featured_until: YYYY-MM-DD` (+ optional `featured_message`) puts the festival in the paid "Featured festival" slot at the top of the home page and pins it to the top of the guide, labeled Sponsored, through that date. Rebuild after it ends; the page also hides expired placements on its own.
+- `claimed: true` (+ optional `claimed_by: "Organization name"`) shows the "Verified by organizer" badge and replaces every Claim button on the page with "✓ Event is claimed"
+- An active `sponsor` replaces the Sponsor buttons with "Event is sponsored"; they come back automatically when the sponsorship ends (with the festival, or at `sponsor.until` if earlier)
 - `sponsor: { name, url, message }` adds a labeled "Presented by" bar with `rel="sponsored"` links
 - `email`, `sponsorship_email`, `contact_url`, `email_source`: organizer contacts. The email shows on the festival page unless `email_personal: true` (a named person's address), which keeps it on the outreach list only.
 

@@ -1,13 +1,15 @@
-{% assign il_festivals = site.festivals | sort: "rank" %}
+{% assign il_all = site.festivals | sort: "rank" %}
+{% capture il_slugs %}{% for f in il_all %}{% include festival-state.html festival=f %}{% unless fs_ended %}{{ f.slug }}|{% endunless %}{% endfor %}{% endcapture %}
+{% assign il_slugs = il_slugs | split: "|" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Florida Food Festivals",
   "url": {{ site.url | append: "/festivals/" | jsonify }},
-  "numberOfItems": {{ il_festivals.size }},
+  "numberOfItems": {{ il_slugs.size }},
   "itemListOrder": "https://schema.org/ItemListOrderDescending",
-  "itemListElement": [{% for f in il_festivals %}
+  "itemListElement": [{% for slug in il_slugs %}{% assign f = site.festivals | where: "slug", slug | first %}
     { "@type": "ListItem", "position": {{ forloop.index }}, "url": {{ site.url | append: f.url | jsonify }}, "name": {{ f.title | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }
