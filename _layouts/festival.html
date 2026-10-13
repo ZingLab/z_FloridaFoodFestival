@@ -1,0 +1,167 @@
+---
+layout: default
+---
+{% assign f = page %}
+{% assign has_sponsor = false %}{% if f.sponsor and f.sponsor.name %}{% assign has_sponsor = true %}{% endif %}
+{% if f.website %}
+  {% if f.website contains "?" %}{% assign utm_join = "&" %}{% else %}{% assign utm_join = "?" %}{% endif %}
+  {% assign official_url = f.website | append: utm_join | append: "utm_source=floridafoodfestival&utm_medium=referral&utm_campaign=festival_listing" %}
+{% endif %}
+{% capture map_query %}{{ f.venue }}, {% if f.street_address %}{{ f.street_address }}, {% endif %}{{ f.city }}, FL {{ f.postal_code }}{% endcapture %}
+{% assign map_url = map_query | strip | url_encode | prepend: "https://www.google.com/maps/search/?api=1&query=" %}
+
+<article class="festival-page">
+  <header class="festival-hero" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)), url('{{ f.featured_image }}');">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/festivals/">Festivals</a></li>
+          <li><a href="/festivals/?region={{ f.region | url_encode }}">{{ f.region }}</a></li>
+          <li aria-current="page">{{ f.title }}</li>
+        </ol>
+      </nav>
+      <p class="festival-kicker"><span class="fest-tier tier-{{ f.tier }}">{{ f.tier_label }}</span>{% if f.claimed %} <span class="fest-verified">✓ Verified by organizer</span>{% endif %}</p>
+      <h1>{{ f.title }}</h1>
+      <p class="festival-short">{{ f.short }}</p>
+      <ul class="festival-hero-meta">
+        <li><strong>When</strong> <time datetime="{{ f.start_date }}">{% include festival-dates.html festival=f %}</time>{% if f.date_status == "estimated" %} <span class="fest-est">est.</span>{% endif %}</li>
+        <li><strong>Where</strong> {{ f.city }}, FL</li>
+        <li><strong>Admission</strong> {% if f.admission == "free" %}Free{% elsif f.admission == "park" %}Theme park ticket{% else %}Ticketed{% endif %}</li>
+      </ul>
+      <div class="festival-hero-actions">
+        {% if official_url %}<a class="btn" href="{{ official_url }}" target="_blank" rel="noopener{% if has_sponsor %} sponsored{% endif %}">Official site &amp; tickets</a>{% endif %}
+        <a class="btn btn-ghost" href="{{ map_url }}" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+  </header>
+
+  {% if has_sponsor %}
+  <div class="festival-presented">
+    <div class="container">
+      <span class="fest-flag">Sponsored</span>
+      Presented by
+      {% if f.sponsor.url %}<a href="{{ f.sponsor.url }}" target="_blank" rel="sponsored noopener">{{ f.sponsor.name }}</a>{% else %}<strong>{{ f.sponsor.name }}</strong>{% endif %}
+      {% if f.sponsor.message %}<span class="festival-presented-msg">{{ f.sponsor.message }}</span>{% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="container festival-body">
+    <div class="festival-main">
+      <section class="festival-section">
+        <h2>About the {{ f.title }}</h2>
+        {{ content }}
+      </section>
+
+      {% if f.highlights %}
+      <section class="festival-section">
+        <h2>Festival highlights</h2>
+        <div class="festival-highlights">
+          {% for h in f.highlights %}
+          <div class="festival-highlight">
+            <h3>{{ h.title }}</h3>
+            <p>{{ h.description }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if f.foods %}
+      <section class="festival-section">
+        <h2>What to eat</h2>
+        <ul class="festival-foods">
+          {% for item in f.foods %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if f.tips %}
+      <section class="festival-section">
+        <h2>Tips for visiting</h2>
+        <ol class="festival-tips">
+          {% for t in f.tips %}<li>{{ t }}</li>{% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+
+      {% if f.faq %}
+      <section class="festival-section festival-faq">
+        <h2>Frequently asked questions</h2>
+        {% for item in f.faq %}
+        <details{% if forloop.first %} open{% endif %}>
+          <summary>{{ item.q }}</summary>
+          <p>{{ item.a }}</p>
+        </details>
+        {% endfor %}
+      </section>
+      {% endif %}
+    </div>
+
+    <aside class="festival-aside">
+      <div class="festival-facts">
+        <h2>Quick facts</h2>
+        <dl>
+          <dt>Dates</dt>
+          <dd>{% include festival-dates.html festival=f %}{% if f.date_status == "estimated" %}<br><small>Estimated. Confirm with the organizer.</small>{% endif %}</dd>
+          <dt>Typical timing</dt><dd>{{ f.timing }}</dd>
+          <dt>Location</dt>
+          <dd>
+            <span>{{ f.venue }}</span><br>
+            <span>{% if f.street_address %}{{ f.street_address }}, {% endif %}{{ f.city }}, FL {{ f.postal_code }}</span><br>
+            <small>{{ f.county }} County · <a href="/festivals/?region={{ f.region | url_encode }}">{{ f.region }}</a></small>
+          </dd>
+          <dt>Admission</dt><dd>{{ f.price }}</dd>
+          <dt>Size</dt><dd>{{ f.tier_label }}: {{ f.scale }}</dd>
+          {% if f.founded %}<dt>First held</dt><dd>{{ f.founded }}</dd>{% endif %}
+          <dt>Organizer</dt><dd>{{ f.organizer }}</dd>
+          <dt>Type</dt>
+          <dd class="festival-cats">{% for c in f.categories %}<a href="/festivals/?type={{ c | url_encode }}">{{ c }}</a>{% endfor %}</dd>
+          <dt>Official site</dt>
+          <dd>{% if official_url %}<a href="{{ official_url }}" target="_blank" rel="noopener">{{ f.website | remove: "https://" | remove: "http://" | remove: "www." | split: "/" | first }}</a>{% else %}Not listed yet. <a href="/claim/?festival={{ f.slug }}">Organizers, add it</a>{% endif %}</dd>
+        </dl>
+      </div>
+
+      {% unless f.claimed %}
+      <div class="festival-box festival-box--claim">
+        <h3>Is this your festival?</h3>
+        <p>Claim this page for free to update dates, add tickets and photos, and get a verified badge.</p>
+        <a class="btn btn-small" href="/claim/?festival={{ f.slug }}">Claim this page</a>
+      </div>
+      {% endunless %}
+
+      {% unless has_sponsor %}
+      <div class="festival-box festival-box--sponsor">
+        <h3>Sponsor this page</h3>
+        <p>Put your restaurant, hotel, brewery or brand in front of people planning a trip to the {{ f.title }}.</p>
+        <a class="btn btn-small btn-dark" href="/advertise/?festival={{ f.slug }}&type=sponsor#inquiry">Become the presenting sponsor</a>
+      </div>
+      {% endunless %}
+
+      <p class="festival-correction"><a href="/advertise/?festival={{ f.slug }}&type=correction#inquiry">Report a correction</a></p>
+    </aside>
+  </div>
+
+  {% assign related = site.festivals | where: "region", f.region | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
+  {% if related.size < 3 %}
+    {% assign related = site.festivals | where: "tier", f.tier | where_exp: "x", "x.slug != f.slug" | sort: "rank" %}
+  {% endif %}
+  {% if related.size > 0 %}
+  <section class="festival-related">
+    <div class="container">
+      <h2>More festivals {% if related.first.region == f.region %}in {{ f.region }}{% else %}like this{% endif %}</h2>
+      <div class="fest-grid fest-grid--compact">
+        {% for r in related limit: 4 %}{% include festival-card.html festival=r compact=true %}{% endfor %}
+      </div>
+      <p class="view-all-link"><a class="btn" href="/festivals/">Browse all Florida food festivals</a></p>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="container">
+    <p class="fest-disclaimer">Florida Food Festival is an independent guide and is not affiliated with the {{ f.title }} or its organizers. Event details change; please verify dates, hours and prices with the official organizer before you go. Photos are illustrative.</p>
+  </div>
+</article>
+
+{% include organizer-cta.html festival=f %}

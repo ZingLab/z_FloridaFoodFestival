@@ -1,0 +1,18 @@
+<!-- _includes/festival-highlights.html: upcoming festivals on the home page -->
+{% assign today = site.time | date: "%Y-%m-%d" %}
+{% assign upcoming = site.festivals | where_exp: "f", "f.end_date >= today" | sort: "start_date" %}
+<section class="recent-posts-section festival-home">
+  <div class="container">
+    <h2 class="section-title">Upcoming Florida Food Festivals</h2>
+    <p class="section-description">From EPCOT's global marketplaces to hometown seafood fries, here's what's coming up next.</p>
+    <div class="fest-grid fest-grid--compact">
+      {% for f in upcoming limit: 6 %}{% include festival-card.html festival=f compact=true %}{% endfor %}
+    </div>
+    <div class="view-all-link">
+      <a href="/festivals/" class="btn">Browse all {{ site.festivals.size }} festivals</a>
+      <a href="/festivals/?region=Panhandle" class="btn btn-ghost-dark">Panhandle</a>
+      <a href="/festivals/?type=Seafood" class="btn btn-ghost-dark">Seafood</a>
+      <a href="/festivals/?admission=free" class="btn btn-ghost-dark">Free festivals</a>
+    </div>
+  </div>
+</section>

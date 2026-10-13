@@ -1,0 +1,32 @@
+{%- assign fc = include.festival -%}
+{%- capture fc_search -%}{{ fc.title }} {{ fc.city }} {{ fc.county }} {{ fc.region }} {{ fc.short }} {{ fc.foods | join: " " }} {{ fc.categories | join: " " }}{%- endcapture -%}
+<article class="fest-card{% if include.compact %} fest-card--compact{% endif %}{% if fc.sponsor and fc.sponsor.name %} is-sponsored{% endif %}"
+  data-rank="{{ fc.rank }}"
+  data-name="{{ fc.title | downcase | escape }}"
+  data-start="{{ fc.start_date }}"
+  data-end="{{ fc.end_date }}"
+  data-region="{{ fc.region | escape }}"
+  data-cats="{{ fc.categories | join: '|' | escape }}"
+  data-months="{{ fc.months | join: '|' }}"
+  data-admission="{{ fc.admission }}"
+  data-tier="{{ fc.tier }}"
+  data-search="{{ fc_search | downcase | escape }}">
+  <a class="fest-card-media" href="{{ fc.url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ fc.featured_image }}" alt="" loading="lazy"{% if include.compact %} width="120" height="120"{% else %} width="400" height="225"{% endif %}>
+    {% unless include.compact %}
+    <span class="fest-tier tier-{{ fc.tier }}">{{ fc.tier_label }}</span>
+    {% if fc.sponsor and fc.sponsor.name %}<span class="fest-flag">Sponsored</span>{% endif %}
+    {% endunless %}
+  </a>
+  <div class="fest-card-body">
+    {% if include.compact %}<p class="fest-card-badges"><span class="fest-tier tier-{{ fc.tier }}">{{ fc.tier_label }}</span>{% if fc.sponsor and fc.sponsor.name %} <span class="fest-flag">Sponsored</span>{% endif %}</p>{% endif %}
+    <p class="fest-card-when"><time datetime="{{ fc.start_date }}">{% include festival-dates.html festival=fc %}</time>{% if fc.date_status == "estimated" %} <span class="fest-est" title="Estimated from past editions. Verify with the organizer.">est.</span>{% endif %}</p>
+    <h3 class="fest-card-title"><a href="{{ fc.url }}">{{ fc.title }}</a></h3>
+    <p class="fest-card-where">{{ fc.city }}, FL · {{ fc.region }}</p>
+    <p class="fest-card-short">{{ fc.short }}</p>
+    <ul class="fest-tags">
+      {% if fc.admission == "free" %}<li class="tag-free">Free</li>{% elsif fc.admission == "park" %}<li>Park admission</li>{% else %}<li>Ticketed</li>{% endif %}
+      {% for c in fc.categories limit: 2 %}<li>{{ c }}</li>{% endfor %}
+    </ul>
+  </div>
+</article>

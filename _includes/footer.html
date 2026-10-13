@@ -11,10 +11,27 @@
             <h4>{{ include.quick_links_title | default: "Quick Links" }}</h4>
             <ul>
               <li><a href="/">Home</a></li>
+              <li><a href="/festivals/">Food Festivals</a></li>
               <li><a href="/recipes/">Recipes</a></li>
             </ul>
           </div>
-          <div class="link-group">
+          <div class="link-group link-group--regions">
+            <h4>Festivals by Region</h4>
+            <ul>
+              {% assign footer_regions = site.festivals | map: "region" | uniq | sort %}
+              {% for r in footer_regions %}<li><a href="/festivals/?region={{ r | url_encode }}">{{ r }}</a></li>{% endfor %}
+            </ul>
+          </div>
+          <div class="link-group link-group--work">
+            <h4>Work With Us</h4>
+            <ul>
+              <li><a href="/advertise/">Advertise &amp; Sponsor</a></li>
+              <li><a href="/claim/">Claim a Festival Page</a></li>
+              <li><a href="/advertise/?type=add#inquiry">Add a Missing Festival</a></li>
+              <li><a href="/advertise/?type=correction#inquiry">Report a Correction</a></li>
+            </ul>
+          </div>
+          <div class="link-group link-group--buy">
             <h4>Buy FloridaFoodFestival</h4>
             <ul>
               <li><a href="mailto:hi@zinglab.com?subject=FloridaFoodFestival">Email us for info</a></li>
@@ -33,6 +50,7 @@
         </div>
       </div>
       <div class="footer-bottom">
+        <p class="footer-note">Independent guide. Not affiliated with the festivals listed. Always confirm dates with organizers.</p>
         <p>&copy; {{ 'now' | date: "%Y" }} <a href="https://zinglab.com/?ref=flafoodfest">{{ include.copyright_name | default: "ZingLab LLC" }}</a>. All rights reserved.</p>
         <div class="legal-links">
           <a href="/privacy/">Privacy Policy</a>

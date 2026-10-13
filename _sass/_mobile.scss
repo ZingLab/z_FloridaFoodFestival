@@ -1,0 +1,95 @@
+/* Site-wide small-screen adjustments (most traffic is mobile) */
+
+@media (max-width: 768px) {
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .recent-posts-section {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .page-header {
+    padding: 2.25rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin: .5rem 0 0;
+  }
+
+  h3.recipe-title,
+  h3.event-title {
+    font-size: 1.4rem;
+  }
+
+  .events-filter {
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-btn {
+    margin: 0;
+    padding: .5rem .75rem;
+  }
+
+  .recipes-listing,
+  .events-listing {
+    padding: 0 0 2.5rem;
+  }
+
+  .recipe-description ul,
+  .recipe-description ol {
+    padding-left: 1.25rem;
+  }
+
+  .recipe-post .recipe-description h1 {
+    font-size: 1.6rem;
+  }
+
+  .recipe-post .recipe-description h2 {
+    font-size: 1.3rem;
+  }
+
+  .recipe-post .recipe-description h3 {
+    font-size: 1.1rem;
+  }
+
+  .newsletter-embed input,
+  .newsletter-embed select,
+  .newsletter-embed textarea {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
+
+  .btn-large {
+    padding: .85rem 1.5rem;
+    font-size: 1rem;
+  }
+}

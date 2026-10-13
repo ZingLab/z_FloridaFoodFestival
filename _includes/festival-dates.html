@@ -1,0 +1,9 @@
+{%- assign fd = include.festival -%}
+{%- assign s_y = fd.start_date | date: "%Y" -%}{%- assign e_y = fd.end_date | date: "%Y" -%}
+{%- if fd.start_date == fd.end_date -%}
+{{ fd.start_date | date: "%b %-d, %Y" }}
+{%- elsif s_y == e_y -%}
+{{ fd.start_date | date: "%b %-d" }} – {{ fd.end_date | date: "%b %-d, %Y" }}
+{%- else -%}
+{{ fd.start_date | date: "%b %-d, %Y" }} – {{ fd.end_date | date: "%b %-d, %Y" }}
+{%- endif -%}

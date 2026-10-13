@@ -1,0 +1,110 @@
+---
+layout: default
+title: Florida Food Festivals Guide
+seo_title: "Florida Food Festivals 2026–2027: Dates, Cities & Tickets"
+permalink: /festivals/
+description: "The complete guide to Florida food festivals, from EPCOT's Food & Wine Festival to small-town seafood, strawberry and frog leg festivals. Filter by region, month, price and type."
+keywords: "Florida food festivals, Florida food festivals 2027, EPCOT food and wine festival, Florida seafood festivals, Florida strawberry festival, Florida frog leg festival, food festivals near me Florida, Florida events calendar"
+og_image: "/assets/images/index.jpg"
+schema: festivals-itemlist.html
+---
+{% assign festivals = site.festivals | sort: "rank" %}
+
+{%- capture all_cats -%}{% for f in festivals %}{{ f.categories | join: "|" }}{% unless forloop.last %}|{% endunless %}{% endfor %}{%- endcapture -%}
+{% assign categories = all_cats | split: "|" | uniq | sort %}
+{% assign regions = festivals | map: "region" | uniq | sort %}
+
+<section class="page-header fest-header">
+  <div class="container">
+    <h1>Florida Food Festivals</h1>
+    <p class="subtitle">{{ festivals.size }} festivals across the Sunshine State, from EPCOT's global marketplaces to hometown frog leg fries.</p>
+  </div>
+</section>
+
+<section class="fest-directory" id="festival-directory">
+  <div class="container">
+
+    <div class="fest-presented" data-slot="directory-sponsor">
+      <span class="fest-presented-label">Festival guide presented by</span>
+      <a href="/advertise/#directory-sponsorship" class="fest-presented-cta">Your brand here: sponsor the guide</a>
+    </div>
+
+    <form class="fest-controls" id="fest-controls" role="search" aria-label="Filter festivals" onsubmit="return false;">
+      <div class="fest-control fest-control-search">
+        <label for="f-q">Search</label>
+        <input type="search" id="f-q" name="q" placeholder="Festival, city or food (e.g. shrimp)" autocomplete="off">
+      </div>
+      <div class="fest-control">
+        <label for="f-region">Region</label>
+        <select id="f-region" name="region">
+          <option value="">All regions</option>
+          {% for r in regions %}<option value="{{ r | escape }}">{{ r }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="fest-control">
+        <label for="f-cat">Type</label>
+        <select id="f-cat" name="type">
+          <option value="">All types</option>
+          {% for c in categories %}<option value="{{ c | escape }}">{{ c }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="fest-control">
+        <label for="f-month">Month</label>
+        <select id="f-month" name="month">
+          <option value="">Any month</option>
+          {% assign month_names = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+          {% for m in month_names %}<option value="{{ m }}">{{ m }}</option>{% endfor %}
+        </select>
+      </div>
+      <div class="fest-control">
+        <label for="f-admission">Admission</label>
+        <select id="f-admission" name="admission">
+          <option value="">Any</option>
+          <option value="free">Free</option>
+          <option value="ticketed">Ticketed</option>
+          <option value="park">Theme park admission</option>
+        </select>
+      </div>
+      <div class="fest-control">
+        <label for="f-tier">Size</label>
+        <select id="f-tier" name="size">
+          <option value="">All sizes</option>
+          <option value="1">Signature</option>
+          <option value="2">Major</option>
+          <option value="3">Regional</option>
+          <option value="4">Hometown</option>
+        </select>
+      </div>
+      <div class="fest-control">
+        <label for="f-sort">Sort by</label>
+        <select id="f-sort" name="sort">
+          <option value="rank">Biggest first</option>
+          <option value="date">Soonest first</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="fest-status">
+      <p id="fest-count" aria-live="polite">Showing {{ festivals.size }} festivals</p>
+      <button type="button" class="fest-reset" id="fest-reset" hidden>Clear filters</button>
+    </div>
+
+    <div class="fest-grid fest-grid--compact" id="fest-grid">
+      {% for f in festivals %}
+        {% include festival-card.html festival=f compact=true %}
+      {% endfor %}
+    </div>
+
+    <div class="fest-empty" id="fest-empty" hidden>
+      <h2>No festivals match those filters</h2>
+      <p>Try a different month or region, or <a href="/advertise/?type=add#inquiry">tell us about a festival we're missing</a>.</p>
+    </div>
+
+    <p class="fest-disclaimer">Dates marked <span class="fest-est">est.</span> are estimated from past editions. Always confirm dates, hours and prices with the organizer before you travel. Florida Food Festival is an independent guide and is not affiliated with the events listed.</p>
+  </div>
+</section>
+
+{% include organizer-cta.html %}
+
+<script src="/assets/js/festivals.js" defer></script>

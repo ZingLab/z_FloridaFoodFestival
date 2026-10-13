@@ -1,0 +1,14 @@
+{% assign il_festivals = site.festivals | sort: "rank" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Florida Food Festivals",
+  "url": {{ site.url | append: "/festivals/" | jsonify }},
+  "numberOfItems": {{ il_festivals.size }},
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "itemListElement": [{% for f in il_festivals %}
+    { "@type": "ListItem", "position": {{ forloop.index }}, "url": {{ site.url | append: f.url | jsonify }}, "name": {{ f.title | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>

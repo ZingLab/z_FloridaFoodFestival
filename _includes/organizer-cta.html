@@ -1,0 +1,17 @@
+<!-- _includes/organizer-cta.html -->
+<section class="organizer-cta">
+  <div class="container">
+    <div class="organizer-cta-grid">
+      <div class="organizer-cta-card">
+        <h2>Run a Florida food festival?</h2>
+        <p>Claim your free listing to correct dates, add ticket links and photos, and earn a <strong>Verified by organizer</strong> badge.</p>
+        <a href="/claim/{% if include.festival %}?festival={{ include.festival.slug }}{% endif %}" class="btn">Claim {% if include.festival %}this{% else %}your{% endif %} page</a>
+      </div>
+      <div class="organizer-cta-card organizer-cta-card--accent">
+        <h2>Reach hungry festival-goers</h2>
+        <p>Feature your festival, restaurant, brewery or brand in front of people actively planning their next food trip in Florida.</p>
+        <a href="/advertise/{% if include.festival %}?festival={{ include.festival.slug }}&type=sponsor#inquiry{% endif %}" class="btn btn-dark">See sponsorship options</a>
+      </div>
+    </div>
+  </div>
+</section>

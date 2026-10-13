@@ -38,6 +38,9 @@ collections:
   events:
     output: true
     permalink: /special-events/:name/
+  festivals:
+    output: true
+    permalink: /festivals/:name/
 
 # Default front matter
 defaults:
@@ -59,6 +62,12 @@ defaults:
     values:
       layout: "event"
   - scope:
+      path: ""
+      type: "festivals"
+    values:
+      layout: "festival"
+      og_type: "article"
+  - scope:
       path: "events"
     values:
       layout: "events"
@@ -78,6 +87,13 @@ exclude:
   - .jekyll-cache
   - gemfiles
   - README.md
+
+# Sponsorship, claim and listing inquiries.
+# Set form_endpoint to a form backend URL (e.g. https://formspree.io/f/xxxx) to
+# collect submissions; when blank, forms open a prefilled email to inquiry_email.
+contact:
+  inquiry_email: hi@zinglab.com
+  form_endpoint: ""
 
 # Google Analytics
 google_analytics: G-DW82LSZY3F

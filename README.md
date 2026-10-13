@@ -51,6 +51,20 @@ This website is built with Jekyll and deployed on GitHub Pages. The site feature
 
 5. Visit `http://localhost:4000` in your browser
 
+## Food Festival Directory
+
+Festival pages live in `_festivals/` (one Markdown file per festival) and publish to `/festivals/<slug>/`. The directory at `/festivals/` is filtered and sorted in the browser by `assets/js/festivals.js`.
+
+Key front matter fields:
+
+- `rank` / `tier` (1 Signature – 4 Hometown): default "Biggest first" order
+- `start_date` / `end_date` (ISO) and `date_status` (`estimated` or `confirmed`): drive sorting, the "est." badge and the FoodEvent JSON-LD
+- `months`, `region`, `categories`, `admission` (`free` | `ticketed` | `park`): power the filters
+- `claimed: true` shows the "Verified by organizer" badge and hides the claim box
+- `sponsor: { name, url, message }` adds a labeled "Presented by" bar with `rel="sponsored"` links
+
+Sponsor, claim, add and correction requests go through `_includes/inquiry-form.html`. Set `contact.form_endpoint` in `_config.yml` to a form backend (e.g. Formspree) to collect submissions; when it's blank, the form opens a prefilled email to `contact.inquiry_email`.
+
 ## Deployment
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch. The GitHub Actions workflow handles the build and deployment process.

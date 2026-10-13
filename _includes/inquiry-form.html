@@ -1,0 +1,98 @@
+<!-- _includes/inquiry-form.html
+     Params: default_type (sponsor|featured|display|newsletter|claim|add|correction|other), heading -->
+{% assign form_festivals = site.festivals | sort: "title" %}
+{% assign default_type = include.default_type | default: "sponsor" %}
+<form class="inquiry-form" id="inquiry-form"
+  {% if site.contact.form_endpoint != "" %}action="{{ site.contact.form_endpoint }}" method="POST"{% endif %}
+  data-email="{{ site.contact.inquiry_email }}" data-default-type="{{ default_type }}">
+  <h2>{{ include.heading | default: "Get in touch" }}</h2>
+  <p class="inquiry-note">We reply within a few business days. No spam, ever.</p>
+
+  <div class="inquiry-row">
+    <div class="inquiry-field">
+      <label for="iq-type">I'd like to…</label>
+      <select id="iq-type" name="inquiry_type" required>
+        <optgroup label="Advertise">
+          <option value="sponsor">Sponsor a festival page</option>
+          <option value="featured">Get a featured listing</option>
+          <option value="directory">Sponsor the festival guide</option>
+          <option value="display">Run display ads</option>
+          <option value="content">Book a sponsored article</option>
+          <option value="newsletter">Sponsor the newsletter</option>
+        </optgroup>
+        <optgroup label="Listings">
+          <option value="claim">Claim a festival page</option>
+          <option value="add">Add a missing festival</option>
+          <option value="correction">Correct festival details</option>
+        </optgroup>
+        <option value="other">Something else</option>
+      </select>
+    </div>
+    <div class="inquiry-field">
+      <label for="iq-festival">Festival</label>
+      <select id="iq-festival" name="festival">
+        <option value="">Not about a specific festival</option>
+        {% for f in form_festivals %}<option value="{{ f.slug }}">{{ f.title }}</option>{% endfor %}
+        <option value="not-listed">Not listed yet</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="inquiry-row">
+    <div class="inquiry-field">
+      <label for="iq-name">Your name <span aria-hidden="true">*</span></label>
+      <input id="iq-name" name="name" type="text" autocomplete="name" required>
+    </div>
+    <div class="inquiry-field">
+      <label for="iq-email">Email <span aria-hidden="true">*</span></label>
+      <input id="iq-email" name="email" type="email" autocomplete="email" required>
+    </div>
+  </div>
+
+  <div class="inquiry-row">
+    <div class="inquiry-field">
+      <label for="iq-org">Festival, company or brand</label>
+      <input id="iq-org" name="organization" type="text" autocomplete="organization">
+    </div>
+    <div class="inquiry-field" data-show-for="claim correction add">
+      <label for="iq-role">Your role</label>
+      <select id="iq-role" name="role">
+        <option value="">Choose one</option>
+        <option>Festival organizer / director</option>
+        <option>Marketing or PR for the festival</option>
+        <option>Board member or volunteer</option>
+        <option>Vendor or sponsor</option>
+        <option>Festival-goer</option>
+      </select>
+    </div>
+    <div class="inquiry-field" data-show-for="sponsor featured directory display content newsletter">
+      <label for="iq-budget">Monthly budget (optional)</label>
+      <select id="iq-budget" name="budget">
+        <option value="">Prefer not to say</option>
+        <option>Under $250</option>
+        <option>$250 – $1,000</option>
+        <option>$1,000 – $5,000</option>
+        <option>$5,000+</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="inquiry-field" data-show-for="claim">
+    <label for="iq-proof">How can we verify you? (official email domain, website or social account)</label>
+    <input id="iq-proof" name="verification" type="text">
+  </div>
+
+  <div class="inquiry-field">
+    <label for="iq-msg">Message</label>
+    <textarea id="iq-msg" name="message" rows="5" placeholder="Tell us about your goals, dates or the details that need updating."></textarea>
+  </div>
+
+  <div class="inquiry-hp" aria-hidden="true">
+    <label for="iq-website">Leave this empty</label>
+    <input id="iq-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit" class="btn btn-large">Send inquiry</button>
+  <p class="inquiry-status" id="inquiry-status" role="status" hidden></p>
+</form>
+<script src="/assets/js/inquiry.js" defer></script>
