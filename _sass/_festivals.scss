@@ -562,3 +562,18 @@ a.btn-ghost-dark:visited, a.btn-ghost-dark:hover { color: var(--fest-ink); }
 [data-sponsor-cta][hidden] { display: none; }
 .organizer-cta-card .festival-status-pill { background: #fff; }
 .organizer-cta-card--accent .festival-status-pill { background: #fff8e6; }
+
+.outreach-lock { max-width: 360px; margin: 1.5rem 0; }
+.outreach-lock[hidden] { display: none; }
+.outreach-lock label { display: block; font-weight: 600; font-size: .9rem; margin-bottom: .35rem; }
+.outreach-lock-row { display: flex; gap: .5rem; }
+.outreach-lock input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 16px;
+  padding: .55rem .75rem;
+  border: 1px solid #cfd6dc;
+  border-radius: 8px;
+}
+.outreach-lock-error { color: #b42318; font-size: .9rem; margin: .5rem 0 0; }
