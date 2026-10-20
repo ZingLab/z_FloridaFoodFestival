@@ -37,11 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4.7'
+          # Newer runner images only ship the latest patch of each Ruby series
+          ruby-version: '3.4'
           bundler-cache: false
       - name: Install dependencies
         run: |
